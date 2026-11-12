@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ckb" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>کیوان بابایی | ڤیدیۆ، دیزاین و ناوەڕۆک بە یارمەتی ژیریی دەستکرد</title>
+<meta name="description" content="پۆرتفۆلیۆی کیوان بابایی، هەولێر: ئەپ و ماڵپەڕی فرەزمان، فرۆشگای ئۆنلاین بە یاریدەدەری فرۆشتنی زیرەک، ئەیجێنتی ژیریی دەستکرد بۆ تۆڕە کۆمەڵایەتییەکان، و ڤیدیۆی ڕیکلام.">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="ar" href="ar.html">
+<link rel="alternate" hreflang="ckb" href="ckb.html">
+<link rel="alternate" hreflang="fa" href="fa.html">
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121b2e; --panel2:#16233b; --line:#223253;
+    --text:#e8eefc; --muted:#9db0d3; --accent:#3aa0ff; --accent2:#22d3b6;
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f5f8ff; --panel:#ffffff; --panel2:#eef3fc; --line:#d5def0; --text:#0e1a33; --muted:#51618a; --accent:#1769d6; --accent2:#0a8f7a; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.9 "Segoe UI",Tahoma,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding-block:6px;gap:10px 14px;flex-wrap:wrap}
+  header.top b{font-size:15px}
+  nav{display:flex;gap:16px;flex-wrap:wrap}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px}
+  nav a:hover{color:var(--text)}
+  .langsw{display:flex;gap:6px;flex-wrap:wrap}
+  .langsw a{font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--muted)}
+  .langsw a[aria-current]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .hero{padding:56px 0 32px}
+  .hero h1{font-size:clamp(28px,5.5vw,46px);line-height:1.35;margin:0 0 12px}
+  .hero p.lead{font-size:clamp(16px,2.3vw,19px);color:var(--muted);max-width:760px;margin:0 0 20px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+  .chips li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);background:var(--panel)}
+  .btns{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+  .btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  h2{font-size:27px;margin:0 0 8px;line-height:1.5}
+  h3{margin:0 0 6px;font-size:20px;line-height:1.6}
+  h4{margin:6px 0 4px;font-size:17px;line-height:1.6}
+  .sub{color:var(--muted);margin:0 0 22px;max-width:800px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .card .body{padding:18px}
+  .tag{display:inline-block;font-size:12px;padding:3px 9px;border-radius:999px;background:var(--panel2);color:var(--muted);margin:0 0 6px 6px;border:1px solid var(--line)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:760px){.grid2,.cols{grid-template-columns:1fr}}
+  .block{margin-bottom:24px}
+  video,img.shot{display:block;width:100%;height:auto;background:#000}
+  .logo{height:56px;width:auto;margin-bottom:10px}
+  .note{font-size:13.5px;color:var(--muted);margin:10px 0 0}
+  ul.clean{margin:8px 0 0;padding-inline-start:20px}
+  ul.clean li{margin:5px 0}
+  .done li::marker{color:var(--accent2)}
+  .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  .fields p{margin:0;color:var(--muted);font-size:14.5px}
+  .langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0 0;padding:0;list-style:none}
+  .langs li{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+  .langs b{display:block;font-size:17px}
+  .langs span{font-size:12px;color:var(--muted)}
+  .langs i{font-style:normal;font-size:11px;padding:1px 6px;border-radius:999px;border:1px solid var(--accent2);color:var(--accent2);margin-inline-start:4px}
+  .phone-side{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:22px;align-items:start}
+  .phone-side img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--line)}
+  @media (max-width:760px){.phone-side{grid-template-columns:1fr}.phone-side img{max-width:300px;margin:0 auto}}
+  .agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .agents p{margin:0;color:var(--muted);font-size:14.5px}
+  .side{display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch}
+  .side img.shot{height:100%;object-fit:cover}
+  .side-note{padding:18px;background:var(--panel2);border-inline-start:1px solid var(--line)}
+  .side-note h4{margin-top:0}
+  .side-note p{margin:6px 0;font-size:15px}
+  @media (max-width:760px){.side{grid-template-columns:1fr}.side img.shot{height:auto}.side-note{border-inline-start:0;border-top:1px solid var(--line)}}
+  .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+  footer{padding:30px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <b>کیوان بابایی</b>
+    <div class="langsw" aria-label="زمان"><a href="index.html" lang="en" dir="ltr">English</a><a href="ar.html" lang="ar">العربية</a><a href="ckb.html" lang="ckb" aria-current="page">کوردی</a><a href="fa.html" lang="fa">فارسی</a></div>
+    <nav aria-label="بەشەکان">
+      <a href="#scope">چی دەکەم</a>
+      <a href="#hailowner">HailOwner</a>
+      <a href="#store">فرۆشگای بۆنەکان</a>
+      <a href="#agents">ئەیجێنتەکانی AI</a>
+      <a href="#contact">پەیوەندی</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>ڤیدیۆ، دیزاین و ناوەڕۆک بە یارمەتی ژیریی دەستکرد</h1>
+    <p class="lead">ئەپ، ماڵپەڕ و فرۆشگای ئۆنلاین بە زمانی زۆر دروست دەکەم (لەوانە ئەو زمانانەی لە ڕاستەوە بۆ چەپ دەنووسرێن)، ڤیدیۆی ڕیکلام بەرهەم دەهێنم، و ئەیجێنتی ژیریی دەستکرد دروست دەکەم بۆ فرۆشتن و ناوەڕۆک. بۆ خێرایی ئامرازەکانی ژیریی دەستکرد بەکار دەهێنم و هەر ئەنجامێک خۆم بە دەست پشکنینی دەکەم: دەق، ئاڕاستەی نووسین، ڕەنگەکان و کات.</p>
+    <ul class="chips">
+      <li>هەولێر، عێراق</li>
+      <li>فارسی (زمانی دایک)</li>
+      <li>کوردی و ئینگلیزی (ئاستی کار)</li>
+      <li>ئامادەم بۆ کاری تەواوکات، لە دوورەوە و پڕۆژەیی</li>
+    </ul>
+    <div class="btns">
+      <a class="btn" href="#scope">چی دەکەم</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/keyvan-babaee-aaa6133b4/">پرۆفایلی LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- ========== چی دەکەم ========== -->
+  <section id="scope">
+    <h2>چی دەکەم</h2>
+    <p class="sub">بوارەکانی کارم، ئەوەی دەتوانم بۆ ئێوەی بکەم، و سنوورەکان. لە ژێر ئەم بەشە پڕۆژەی ڕاستەقینە بۆ هەر بوارێک دەبینن.</p>
+
+    <div class="fields block">
+      <div class="card"><div class="body"><h4>ئەپ و ماڵپەڕ</h4><p>ئەپی ئەندرۆید (React Native / Expo) لەگەڵ سێرڤەرێکی سادە و پانێڵی بەڕێوەبردن، و ماڵپەڕی ناساندن. هەموو شتێک بە زمانی زۆر کار دەکات، لەوانە زمانە لە ڕاستەوە بۆ چەپەکان (فارسی، عەرەبی، کوردی، ئوردو).</p></div></div>
+      <div class="card"><div class="body"><h4>فرۆشگای ئۆنلاین</h4><p>ڕووکاری فرۆشگا، سەبەتەی کڕین، هەژماری کڕیار، پارەدان (هێشتا بە شێوازی تاقیکردنەوە)، داشبۆردی بەڕێوەبردن، و یاریدەدەرێکی فرۆشتنی زیرەک کە وەک فرۆشیارێکی پیشەیی لەگەڵ کڕیار قسە دەکات.</p></div></div>
+      <div class="card"><div class="body"><h4>ئەیجێنت و یاریدەدەری ژیریی دەستکرد</h4><p>ئەیجێنت بە Claude API کە پلان دادەنێن، دەنووسن، وەڵام دەدەنەوە و ڕاوێژ دەکەن. هەر شتێک بڵاو ببێتەوە مرۆڤێک پەسەندی دەکات و تەنها لەسەر داتای ڕاستەقینە کار دەکەن، نەک گومان.</p></div></div>
+      <div class="card"><div class="body"><h4>ڤیدیۆی ڕیکلام و ناساندن</h4><p>نووسینی دەق، مۆنتاژ، یەکخستنی دەنگ، مۆسیقا، کاریگەری دەنگ، ژێرنووس، و وەشانی چەند زمانی. وێنەی بەرهەمهێنراو بە یارمەتی ژیریی دەستکرد بەکار دەهێنم و خۆم مۆنتاژی دەکەم.</p></div></div>
+      <div class="card"><div class="body"><h4>براند و دیزاین بۆ تۆڕە کۆمەڵایەتییەکان</h4><p>وەشانەکانی لۆگۆ، ئایکۆن، دیزاینی کارتی ئامادەی چاپ، دیزاین بۆ تۆڕە کۆمەڵایەتییەکان و ڤیدیۆی کورت بۆ پەیج و ڕیلز.</p></div></div>
+      <div class="card"><div class="body"><h4>فرەزمانکردن و بەڵگەکردن</h4><p>ئامادەکردنی ئەپ یان ماڵپەڕ بۆ ١٨ زمان، پشکنینی ڕیزبەندی لە ڕاستەوە بۆ چەپ، و نووسینی تایبەتمەندی، لیستی پشکنین و تاقیکردنەوەی خۆکار.</p></div></div>
+    </div>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>ئەوەی دەتوانم بۆ ئێوە بیکەم</h3>
+        <ul class="clean done">
+          <li>دروستکردنی ماڵپەڕ یان لاپەڕەی دابەزین بە فرەزمان، لەوانە ڕیزبەندی کوردی، عەرەبی و فارسی.</li>
+          <li>دروستکردنی ئەپی ئەندرۆید لەگەڵ پانێڵی بەڕێوەبردن، یان فرۆشگایەک لەگەڵ یاریدەدەری کڕین بۆ کڕیارانتان.</li>
+          <li>دروستکردنی یاریدەدەری ژیریی دەستکرد بۆ کارەکەتان: وەڵامدانەوەی کڕیار، نووسینی پێشنووسی ناوەڕۆک، یان ڕاوێژکردن بە خاوەنکار لەسەر بنەمای داتای ڕاستەقینەی فرۆشتن.</li>
+          <li>بەرهەمهێنانی ڤیدیۆی ڕیکلام یان ناساندن و وەشانی بە زمانەکانی تر.</li>
+          <li>پلاندانان و دروستکردنی ناوەڕۆک بۆ پەیجەکانی تۆڕە کۆمەڵایەتییەکان.</li>
+          <li>ئامادەکردنی وەرگێڕان و تاقیکردنەوەی بەرهەم بە هەموو زمانەکان.</li>
+        </ul>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>سنوورەکان، بە ڕاشکاوی</h3>
+        <ul class="clean">
+          <li>پڕۆژەکانی ئێرە نموونەی تاقیکارین یان هێشتا نەکراونەتە بازاڕ. هیچیان هێشتا کڕیاری پارەدەری نییە.</li>
+          <li>بە ئامرازی یارمەتیدراو بە ژیریی دەستکرد کار دەکەم و ئەنجامەکان خۆم پشکنینیان دەکەم.</li>
+          <li>داوای شارەزایی پیشەیی لە Photoshop و Illustrator ناکەم، بەڵام بە یارمەتی ژیریی دەستکرد لەگەڵ هەموو ئامرازێک دەگەمە ئەنجامی باش.</li>
+          <li>ئینگلیزی و کوردییەکەم لە ئاستی کارە و عەرەبییەکەم لە ئاستی بنەڕەتە.</li>
+        </ul>
+      </div></article>
+    </div>
+  </section>
+
+  <!-- ========== HAILOWNER ========== -->
+  <section id="hailowner">
+    <img class="logo" src="logo-full.png" alt="لۆگۆی HailOwner">
+    <h2>HailOwner: کارتێک، ئەپێک، ماڵپەڕێک، ١٨ زمان</h2>
+    <p class="sub">پڕۆژە سەرەکییەکەم. کارتی QR لە پشت شووشەی پێشەوەی ئۆتۆمبێل دادەنرێت. ئەگەر کێشەیەک ڕووبدات (ئۆتۆمبێلەکە ڕێگەی گرتووە، چراکان داگیرساون، دەرگا کراوەیە)، کەسێکی نزیک کارتەکە سکان دەکات و ڕستەیەکی ئامادە هەڵدەبژێرێت، و خاوەنەکە ئاگادارکردنەوە لە مۆبایلەکەی وەردەگرێت. <b>هیچ کەس ژمارەی تەلەفۆنی ئەوی تر نابینێت</b> و ئەوەی سکان دەکات پێویستی بە ئەپ یان هەژمار نییە. هەموو بەرهەمەکەم خۆم دیزاین و دروست کردووە: بیرۆکە، ئەپی خاوەن، سێرڤەر، لاپەڕەی سکان، پانێڵی بەڕێوەبردن، ماڵپەڕ و ڤیدیۆکان.</p>
+
+    <article class="card block">
+      <img class="shot" src="hero-poster.jpg" alt="کەسێک شەو کارتی QR لەسەر شووشەی ئۆتۆمبێل سکان دەکات">
+      <div class="body">
+        <div class="grid2">
+          <img class="shot" style="border-radius:12px" src="site-problems.jpg" alt="چوار دۆخی کارتەکەی بۆ دروستکراوە: پارکی هەڵە، چرا داگیرساو، دەرگای کراوە، ڕووداو یان زیان">
+          <img class="shot" style="border-radius:12px" src="site-compare.jpg" alt="تێبینی بە ژمارەی تەلەفۆن لەسەر شووشە بەرامبەر کارتی QR">
+        </div>
+        <p class="note">ئەو چوار دۆخەی کارتەکەی بۆ دروستکراوە (ڕاست)، و بۆچی کارت لە نووسینی ژمارەی تەلەفۆن لەسەر شووشە باشترە (چەپ).</p>
+      </div>
+    </article>
+
+    <!-- ئەپ -->
+    <h3 style="margin:30px 0 8px">ئەپی HailOwner</h3>
+    <p class="sub">ئەپی ئەندرۆید بۆ خاوەنی ئۆتۆمبێل (Expo / React Native) لەگەڵ سێرڤەری تایبەت. خاوەن هەرگیز تۆمار نابێت: دامەزراندن و کردنەوەی ئەپ هەمان تۆمارکردنە. لە خوارەوە لاپەڕەی سەرەکی ڕاستەقینەی ئەپی دیمۆ بە ئینگلیزی دەبینن.</p>
+    <article class="card block"><div class="body">
+      <div class="phone-side">
+        <img src="app-home.jpg" alt="لاپەڕەی Home ی ئەپی HailOwner بە ئینگلیزی: گۆڕینی ڕۆن دوای ٥ ڕۆژ، ئاگاداری پارکی هەڵە بۆ BMW X3، و ئۆتۆمبێلی خاوەن" loading="lazy">
+        <div>
+          <h4 style="margin-top:0">لاپەڕەی سەرەکی (Home)</h4>
+          <p style="margin:6px 0">هەرچی خاوەن سەرەتا پێویستییەتی لە یەک لاپەڕەدا:</p>
+          <ul class="clean">
+            <li><b>بیرخستنەوەی سێرڤیسێک کە نزیکە:</b> «BMW X3 — گۆڕینی ڕۆن و سێرڤیس: ٥ ڕۆژی تر». ئەپ بەروار لە دوایین سێرڤیسەوە دەژمێرێت و پێش ئەو ئاگادارکردنەوە دەنێرێت.</li>
+            <li><b>ئاگاداری پارکی هەڵە:</b> «ئۆتۆمبێلەکەت ڕێگای چوونەژوورەوە یان دەرچوونی پارکینگی گرتووە»، لەگەڵ ئۆتۆمبێل، پلەیت و چەند خولەک لەمەوبەر نێردراوە. کەسێک کە کارتەکەی سکان کردووە ناردوویەتی و خاوەن بە یەک لێدان وەڵام دەداتەوە.</li>
+            <li><b>ئۆتۆمبێلی خاوەن</b> لە ژێر ئاگادارییەکان، لەگەڵ دۆخی کارت («١ کارت ڕاگیراوە») و هێڵی تابەکان: <span class="ltr">Home · Alerts · Vehicles · Reminders · Settings</span>.</li>
+          </ul>
+          <p class="note">ئەمە لاپەڕەی سەرەکی ڕاستەقینەی ئەپی دیمۆیە، بە ئینگلیزی. داتای نموونە پیشان دەدات (ئۆتۆمبێل و ئاگاداریی نموونە). ئەپ دیمۆیەکی کارکەرە و هێشتا لە فرۆشگای ئەپ نییە.</p>
+        </div>
+      </div>
+      <div class="cols" style="margin-top:14px">
+        <div>
+          <h4>خاوەن چی دەتوانێت بیکات</h4>
+          <ul class="clean">
+            <li><b>وەرگرتنی ئاگادارکردنەوە</b> وەک ئاگادارکردنەوە (push) کە ناوی ئۆتۆمبێل و پلەیت دەهێنێت؛ بابەتە بەپەلەکان بە دەنگی بەرز.</li>
+            <li><b>وەڵامدانەوە بە یەک لێدان</b> بە ڕستەیەکی ئامادە. لە هیچ لایەکەوە دەقی ئازاد نییە، بۆیە خراپ بەکارهێنان نییە.</li>
+            <li><b>بەڕێوەبردنی ئۆتۆمبێل و کارتەکان:</b> تۆمارکردنی کارت بە سکانی QR؛ ڕاگرتن، دووبارە چالاککردن، گۆڕین یان هەڵوەشاندنەوە.</li>
+            <li><b>فرۆشتنی ئاسانی ئۆتۆمبێل:</b> خاوەن موڵکداری لە ئەپدا ئازاد دەکات و خاوەنی نوێ هەمان کارت سکان دەکات و دەبێتە خاوەنی.</li>
+            <li><b>نزیکەکان:</b> تا دوو کەسی متمانەپێکراو کە تەنها لە حاڵەتی فریاکەوتنی ڕاستەقینەدا ئاگادار دەکرێنەوە.</li>
+            <li><b>دۆخی فریاکەوتن (ئارەزوومەندانە):</b> کارتی پزیشکی کۆدکراو، و هەر جارێک ببینرێت تۆمار دەکرێت.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>لە پشتەوە چی هەیە</h4>
+          <ul class="clean">
+            <li><b>لاپەڕەی سکان:</b> ئەوەی سکان دەکات لاپەڕەیەکی وێب بە زمانی خۆی دەبینێت و یەکێک لە ١٨ ڕستە ئامادەکە لە ٥ پۆلدا هەڵدەبژێرێت.</li>
+            <li><b>سێرڤەر:</b> API بە Nuxt / h3 و PostgreSQL، ئاگادارکردنەوەی push و بەشی پشتەوەی فرۆشتنی کارت.</li>
+            <li><b>پانێڵی بەڕێوەبردن:</b> وشەی نهێنی لەگەڵ کۆدی ڕاستاندن؛ کارتە پەیوەستەکان بە ژمارەی زنجیرەیی، ئامار، فیلتەر، دەرکردنی CSV و تۆماری وردبینی.</li>
+            <li><b>یاساکانی نهێنی:</b> هیچ ژمارەیەک هاوبەش ناکرێت؛ کۆمەڵەیەکی داخراو لە ڕستە؛ زانیاری سنووردار دەربارەی ئۆتۆمبێل بۆ نێرەر پیشان دەدرێت.</li>
+            <li><b>کوالیتی:</b> تاقیکردنەوەی خۆکار (نزیکەی ٨٠٠ تاقیکردنەوەی سێرڤەر لە دوایین ژمارەکردنم)، و یاسایەک کە ئەگەر دەقێک لە هەر زمانێکدا کەم بێت بنیادنان ڕەت دەکاتەوە.</li>
+          </ul>
+        </div>
+      </div>
+    </div></article>
+
+    <!-- ماڵپەڕ -->
+    <h3 style="margin:30px 0 8px">ماڵپەڕی HailOwner</h3>
+    <p class="sub">ماڵپەڕێکی ناساندنی خێرا (بێ چوارچێوەی کار و بێ هەنگاوی build). بیرۆکەکە لە چوار هەنگاودا شی دەکاتەوە، کارت لەگەڵ ژمارەی سەر شووشە بەراورد دەکات، وەڵامی پرسیارەکان دەداتەوە و کارت دەفرۆشێت.</p>
+    <article class="card block">
+      <div class="side">
+        <img class="shot" src="site-hero.jpg" alt="لاپەڕەی سەرەکی ماڵپەڕی HailOwner">
+        <aside class="side-note">
+          <h4>ئەپەکەی پشت ئەم ماڵپەڕە</h4>
+          <p>ماڵپەڕ کارت دەفرۆشێت؛ <b>ئەپی خاوەن</b> وای لێدەکات کار بکات. خاوەن QRی کارتەکە سکان دەکات بۆ تۆمارکردنی ئۆتۆمبێل، و لەوێوە هەر ئاگادارییەک لە ڕێبوارێکەوە وەک ئاگادارکردنەوە بە زمانی خۆی دەگات، بە ناوی ئۆتۆمبێل و پلەیتەوە. خاوەن بە یەک لێدان وەڵام دەداتەوە، چەند ئۆتۆمبێل زیاد دەکات، کارتی ون دەبێت ڕایدەگرێت یان دەیگۆڕێت، لە کاتی فرۆشتندا کارت دەداتە خاوەنی نوێ، بیرخستنەوە دادەنێت و دەتوانێت کارتی فریاکەوتنی کۆدکراو هەڵبگرێت.</p>
+          <p class="note">ئەپ دیمۆیە و هێشتا لە فرۆشگای ئەپ نییە.</p>
+        </aside>
+      </div>
+      <div class="body">
+        <div class="grid2">
+          <img class="shot" style="border-radius:12px" src="site-step1.jpg" alt="بەشی «چۆن کار دەکات» لە ماڵپەڕ: هەنگاوی ١">
+          <img class="shot" style="border-radius:12px" src="site-step4.jpg" alt="بەشی «چۆن کار دەکات» لە ماڵپەڕ: هەنگاوی ٤، خاوەن ئاگاداری وەردەگرێت">
+        </div>
+        <img class="shot" style="border-radius:12px;margin-top:12px" src="site-features.jpg" alt="تایبەتمەندییەکانی ماڵپەڕ: وەڵام بە یەک لێدان، نزیکەکان، بیرخستنەوەی زیرەک">
+        <h4 style="margin-top:14px">چی لە ماڵپەڕدا هەیە</h4>
+        <ul class="clean">
+          <li><b>لاپەڕەی سەرەکی و چیرۆک:</b> ڤیدیۆی سەرەکی و چیرۆکێکی چوار هەنگاوی (دامەزراندن، سکان، هەڵبژاردنی ڕستە، گەیشتنی ئاگاداری).</li>
+          <li><b>بەراورد و تایبەتمەندی:</b> ژمارەی تەلەفۆن لەسەر شووشە بەرامبەر کارتی HailOwner، و شەش کارتی تایبەتمەندی.</li>
+          <li><b>فرۆشگا:</b> ڕێڕەوی کڕینی کارت پەیوەست بە بەستەری پارەدان و webhookی واژووکراو، لەگەڵ فۆڕمی «زانیارییەکانت بەجێبهێڵە» وەک جێگرەوە.</li>
+          <li><b>پرسیار و وەڵام، لاپەڕەکانی نهێنی و مەرجەکان، لاپەڕەی سڕینەوەی هەژمار،</b> وێنەی هاوبەشکردن، نەخشەی ماڵپەڕ و ناونیشانی گەڕان.</li>
+          <li><b>پێنج زمان</b> (ئینگلیزی، فارسی، عەرەبی، تورکی، کوردی) لەگەڵ ڕیزبەندی ئاوێنەیی بۆ زمانە لە ڕاستەوە بۆ چەپەکان.</li>
+        </ul>
+        <p><a class="btn" href="https://keyvan198954-cmd.github.io/hailowner-site/">بینینی ماڵپەڕی زیندوو</a></p>
+      </div>
+    </article>
+
+    <!-- ١٨ زمان -->
+    <h3 style="margin:30px 0 8px">١٨ زمان، لەوانە لە ڕاستەوە بۆ چەپ</h3>
+    <p class="sub">هەموو لاپەڕەیەک، ئاگادارکردنەوەیەک، ڕستەی ئاگاداری و لاپەڕەی سکان بە هەر ١٨ زمانەکە هەیە. چواریان لە ڕاستەوە بۆ چەپ دەنووسرێن (فارسی، عەرەبی، کوردی سۆرانی، ئوردو) و ڕیزبەندی بۆیان ئاوێنە دەکرێت.</p>
+    <article class="card block"><div class="body">
+      <ul class="langs" dir="ltr">
+        <li><b dir="rtl">فارسی</b><span>Persian</span><i>RTL</i></li>
+        <li><b>English</b><span>English</span></li>
+        <li><b dir="rtl">العربية</b><span>Arabic</span><i>RTL</i></li>
+        <li><b>Türkçe</b><span>Turkish</span></li>
+        <li><b dir="rtl">کوردی (سۆرانی)</b><span>Kurdish (Sorani)</span><i>RTL</i></li>
+        <li><b>Azərbaycanca</b><span>Azerbaijani</span></li>
+        <li><b>Türkmençe</b><span>Turkmen</span></li>
+        <li><b>Հայերեն</b><span>Armenian</span></li>
+        <li><b dir="rtl">اردو</b><span>Urdu</span><i>RTL</i></li>
+        <li><b>हिन्दी</b><span>Hindi</span></li>
+        <li><b>Русский</b><span>Russian</span></li>
+        <li><b>Français</b><span>French</span></li>
+        <li><b>Español</b><span>Spanish</span></li>
+        <li><b>Deutsch</b><span>German</span></li>
+        <li><b>Português</b><span>Portuguese</span></li>
+        <li><b>中文</b><span>Chinese</span></li>
+        <li><b>Indonesia</b><span>Indonesian</span></li>
+        <li><b>বাংলা</b><span>Bangla</span></li>
+      </ul>
+      <h4 style="margin-top:16px">چۆنم کردە کار بکات</h4>
+      <ul class="clean">
+        <li><b>یەک سەرچاوەی دەق بۆ هەر زمانێک،</b> و تاقیکردنەوەیەکی خۆکار کە ئەگەر ڕستەیەک لە یەکێک لە ١٨ زمانەکە کەم بێت شکست دەهێنێت.</li>
+        <li><b>ئاڕاستەی نووسین لە زمانەوە دەخوێندرێتەوە،</b> نەک گومان، بۆیە فارسی، عەرەبی، سۆرانی و ئوردو بە دروستی ئاوێنە دەبن.</li>
+        <li><b>هەڵبژێری زمان بە گەڕان</b> کە هەر زمانێک بە خەتی خۆی پیشان دەدات، بۆ ئەوەی خەڵک بە هەر زمانێک بتوانن بیدۆزنەوە.</li>
+        <li><b>ڕستە ئامادەکانی ئاگاداری:</b> ١٨ ڕستە لە ٥ پۆلدا بە هەر ١٨ زمانەکە، بۆ ئەوەی نێرەر و خاوەنێک کە زمانی هاوبەشیان نییە هەر یەکتر تێبگەن.</li>
+      </ul>
+      <p class="note"><b>تێبینییەکی ڕاشکاوانە:</b> فارسی زمانی دایکمە و ئینگلیزی و کوردی زمانی کارمن. دە زمان لە ١٨ زمانەکە بە ئامێر وەرگێڕدراون و هێشتا کەسانی زمانزان پێداچوونەوەیان نەکردووە. بۆ بڵاوکردنەوەی ڕاستەقینە پێویستە کەسانی زمانزان بیانخوێننەوە.</p>
+    </div></article>
+
+    <!-- ڤیدیۆ -->
+    <article class="card block">
+      <video controls preload="none" poster="hailowner-promo-poster.jpg" playsinline>
+        <source src="hailowner-promo-en.mp4" type="video/mp4">
+      </video>
+      <div class="body">
+        <h3>ڤیدیۆی ڕیکلامی HailOwner (٥٩ چرکە، ئینگلیزی)</h3>
+        <p>ڕیکلامێکی چیرۆکی: ئۆتۆمبێلێک کە ڕێگای گرتووە، چرایەک کە داگیرساو ماوەتەوە، دەرگایەک کە کراوەیە. HailOwner ڕێگە دەدات هەر کەسێک بێ زانینی ژمارەی تەلەفۆنی خاوەنەکە ئاگاداری بکاتەوە. کەسەکە QR سکان دەکات و ڕستەیەکی ئامادە هەڵدەبژێرێت، و خاوەنەکە بە زمانی خۆی ئاگاداری وەردەگرێت. دەنگ، مۆسیقا، کاریگەری دەنگ و ژێرنووسەکان خۆم مۆنتاژ و کاتبەندیم کردوون.</p>
+        <p class="note">ئەم ڕیکلامە لە <b>چوار وەشانی زمانیدا</b> هەیە (ئینگلیزی، عەرەبی، تورکی و فارسی). لێرەدا تەنها وەشانی ئینگلیزی پیشان دەدرێت.</p>
+        <span class="tag">دەق و مۆنتاژ</span><span class="tag">یەکخستنی دەنگ</span><span class="tag">مۆسیقا و کاریگەری دەنگ</span><span class="tag">ژێرنووس</span><span class="tag">وێنەی یارمەتیدراو بە ژیریی دەستکرد</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- ========== فرۆشگای بۆنەکان ========== -->
+  <section id="store">
+    <img class="logo" src="nill-logo.jpg" alt="لۆگۆی Nill" style="height:64px;border-radius:8px">
+    <h2>Nill: فرۆشگای ئۆنلاینی بۆنەکان بە فرۆشیاری زیرەک و بەڕێوەبەری زیرەک</h2>
+    <p class="sub">فرۆشگایەکی فارسی و لە ڕاستەوە بۆ چەپ بە دیزاینی تاریک و زێڕین. کڕیار یاریدەدەرێکی فرۆشتنی پیشەییی ژیریی دەستکرد وەردەگرێت؛ خاوەنی فرۆشگا داشبۆردی بەڕێوەبردنی هەیە کە بەڕێوەبەرێکی زیرەکی تێدایە و لە داتای ڕاستەقینەی فرۆشگاوە ڕاوێژ دەکات.</p>
+
+    <article class="card block">
+      <img class="shot" src="nill-home.jpg" alt="لاپەڕەی سەرەکی فرۆشگای Nill: ڤیدیۆی تەواوشاشەی شووشەیەکی بۆن لە دارستان، لەگەڵ یاریدەدەری کڕین">
+      <div class="body">
+        <h3>فرۆشگای زیندوو</h3>
+        <p>لاپەڕەی سەرەکی ڤیدیۆیەکی تەواوشاشەیە و پۆلەکان (پیاوان، ژنان، هاوبەش، سپرەی، بادی سپڵاش) بەستەرن کە بە گەیشتنی ماوس ڕووناک دەبنەوە. وێنەی سەرەوە خودی لاپەڕەی سەرەکی ڕاستەقینەیە، لەگەڵ پەیامی بەخێرهاتنی یاریدەدەری کڕین لە خوارەوەی چەپ.</p>
+        <p><a class="btn" href="https://perfumenill.vercel.app/">بینینی ماڵپەڕی زیندوو</a></p>
+        <p class="note">دۆخ: لە ئینتەرنێت بڵاوکراوەتەوە. پارەدان بە شێوازی تاقیکردنەوەیە و فرۆشگا هێشتا نافرۆشێت.</p>
+        <span class="tag">Nuxt + Tailwind</span><span class="tag">Supabase</span><span class="tag">Stripe (تاقیکردنەوە)</span><span class="tag">دیزاینی RTL</span><span class="tag">یاریدەدەری ژیریی دەستکرد</span>
+      </div>
+    </article>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>بۆ کڕیار</h3>
+        <ul class="clean">
+          <li><b>ڕووکاری فرۆشگا:</b> پێنج لاپەڕەی کۆمەڵە، لاپەڕەی هەر بەرهەمێک، کاتالۆگ بە گەڕان و فیلتەر، سەبەتەی کڕین، پارەدان و هەژماری کڕیار.</li>
+          <li><b>پارەدان:</b> کارتی بانکی بە Stripe (شێوازی تاقیکردنەوە)، لەگەڵ گۆڕینی نرخ لە دۆلارەوە بۆ تمەن بە ڕێژەیەک کە خاوەنی فرۆشگا دیاری دەکات.</li>
+          <li><b>ناونیشانەکانی گەڕان و داتای هاوبەشکردن</b> لەسەر لاپەڕەی هەر بەرهەمێک.</li>
+          <li><b>لاپەڕەی پەیوەندی</b> بەو کەناڵانەی خاوەنی فرۆشگا دایدەنێت (ئینستاگرام، تێلێگرام، واتسئاپ و هتد).</li>
+        </ul>
+        <h4 style="margin-top:14px">فرۆشیاری زیرەک (Smart Seller)</h4>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">یاریدەدەرێکی گفتوگۆ کە بە فارسی وەک ڕاوێژکارێکی پیشەیی بۆن لەگەڵ کڕیار قسە دەکات. گوێ دەگرێت کڕیار چی دەوێت (بۆ کێ، وەرز، بۆنە، شێواز، ماوەی مانەوە، بودجە) و بەرهەمی ڕاستەقینە پێشنیار دەکات.</p>
+        <ul class="clean">
+          <li><b>تەنها کۆگای ڕاستەقینە:</b> لە کاتالۆگی زیندوو تەنها ئەو بەرهەمانە هەڵدەبژێرێت کە لە کۆگادا هەن و لەو پۆلەدان کە کڕیار داوای کردووە (سپرەی هەرگیز لەژێر «پیاوان» نایەت)، و بودجە ڕەچاو دەکات.</li>
+          <li><b>هۆکاری ڕاستگۆ:</b> هەر هەڵبژاردنێک لە زانیاری خودی بەرهەمەکەوە ڕوون دەکاتەوە (نۆت، خێزانی بۆن، مانەوە، وەرزەکان)، و ئەگەر پۆلێک بەتاڵ بێت لەجیاتی دروستکردنی بەرهەم هەمان شت دەڵێت.</li>
+          <li><b>هەرگیز هەڵە نادات:</b> ڕاوێژکارێکی یاسابنەما خۆی وەڵام دەداتەوە و مۆدێلی ژیریی دەستکرد بۆ پرسیاری کراوە بەکار دێت؛ کەواتە ئەگەر مۆدێلەکە بەردەست نەبێت کڕیار هەر وەڵامی بەسوود وەردەگرێت.</li>
+        </ul>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>بۆ خاوەنی فرۆشگا</h3>
+        <ul class="clean">
+          <li><b>داشبۆردی بەڕێوەبردن:</b> داواکارییەکان، بەرهەمەکان (لەگەڵ دوگمەی AI کە دەقی ڕیکلامی دەنووسێت)، گەڕان و فیلتەر، پێنج پۆلەکە و بەستەری کەناڵەکان.</li>
+          <li><b>کۆگا:</b> بە هەر داواکارییەکی پارەدراو کۆگا بە خۆکار کەم دەبێتەوە.</li>
+          <li><b>ڕێکخستنی نرخی ئاڵوگۆڕ</b> بۆ دۆلار بۆ تمەن.</li>
+        </ul>
+        <h4 style="margin-top:14px">بەڕێوەبەری زیرەک (Smart Manager)</h4>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">یاریدەدەرێکی گفتوگۆ لە ناو پانێڵی بەڕێوەبردندا کە لە ژمارەکانی خودی فرۆشگاوە ڕاوێژ بە خاوەنکار دەکات. خاوەنی فرۆشگا دەتوانێت بە زمانی ساکار بپرسێت («چی زۆرتر فرۆشرا؟»، «ئەمڕۆ چی بکەم؟») یان دوگمەی ڕاپۆرت بپەستێت.</p>
+        <ul class="clean">
+          <li><b>ئامار:</b> فرۆشتن، قیفی کڕین (کڕیار لە کوێ دەڕوات)، ئەوەی کڕیاران داوای دەکەن، بەرهەمە بەناوبانگەکان، و گفتوگۆکان لەگەڵ فرۆشیاری زیرەک.</li>
+          <li><b>ڕاوێژ دەربارەی کۆگا و کاتالۆگ:</b> ئاگادار دەکاتەوە کام پۆل بەرهەمی فرۆشراوی نییە یان کەمی هەیە، کام بەرهەم وێنە یان نرخی نییە (و ناکڕدرێت)، و کێشەی کۆگا لە کوێیە، و پێشنیار دەکات چی زیاد بکرێت یان دابین بکرێت.</li>
+          <li><b>لیستی «ئەمڕۆ»:</b> گرنگترین کارەکانی ئێستا، لە ئاگادارییەکانەوە دروستکراو.</li>
+          <li><b>بێ AI ش کار دەکات:</b> ئەگەر مۆدێل بەردەست نەبێت ڕاوێژکارێکی یاسابنەما لە داتاوە وەڵام دەداتەوە و ئەمەش دەڵێت.</li>
+        </ul>
+        <p class="note">پانێڵی بەڕێوەبردن پێویستی بە چوونەژوورەوە هەیە، بۆیە لێرە تەنها بە دەق ڕوونم کردووەتەوە. دەتوانم لە پەیوەندییەکدا پیشانی بدەم.</p>
+      </div></article>
+    </div>
+  </section>
+
+  <!-- ========== ئەیجێنتەکانی AI ========== -->
+  <section id="agents">
+    <h2>ئەیجێنتەکانی AI و داشبۆردی بەڕێوەبردن بۆ پەیجێکی ئینستاگرام</h2>
+    <p class="sub">سیستمێکی کارکەر بە Python، FastAPI و Claude API. دوازدە ئەیجێنت، هەریەکەیان یەک ئەرک. ئەنجامەکانیان دەدەنە یەکتر و هەر پێشنووسێک لە ڕیزی پەسەندکردنی داشبۆرددا چاوەڕێ دەکات تا مرۆڤێک پەسەندی بکات، دەستکاری بکات یان ڕەتی بکاتەوە.</p>
+
+    <article class="card block">
+      <img class="shot" src="agents-diagram.png" alt="هێڵکاری ١٢ ئەیجێنت و هێڵەکانی کە بە یەکتر دەیانبەستنەوە: ئەیجێنتی فێربوون، دروستکردن، گفتوگۆ، ڕیزی پەسەندکردن و ئینستاگرام">
+      <div class="body">
+        <h3>ئەیجێنتەکان چۆن بە یەکتر دەبەسترێنەوە</h3>
+        <p class="note" style="margin-top:0">تیرەکان پیشان دەدەن کێ چی دەداتە کێ. هێڵە پچڕپچڕەکان ئەو یاسایانەن کە Manager دەیدات. (نووسینەکانی هێڵکارییەکە ئینگلیزین.)</p>
+      </div>
+    </article>
+
+    <article class="card block">
+      <video controls preload="none" poster="agents-poster.jpg" playsinline>
+        <source src="agents-overview.mp4" type="video/mp4">
+      </video>
+      <div class="body">
+        <h3>ئەیجێنتەکان پێکەوە کار دەکەن (٣٩ چرکە، ئینگلیزی)</h3>
+        <ol class="clean" style="padding-inline-start:22px">
+          <li><b>فێربوون:</b> Scout پەیجی هاوشێوە دەدۆزێتەوە؛ Trends پۆستەکانیان دەخوێنێتەوە.</li>
+          <li><b>پلاندانان:</b> Analyst لە ژمارە ڕاستەقینەکانەوە دەزانێت چی سەرکەوتوو بووە؛ Goals ئامانج دادەنێت؛ Planner ساڵنامەی هەفتانە دروست دەکات.</li>
+          <li><b>دروستکردن:</b> Designer پۆستەکە دەنووسێت؛ Hooks پێنج ڕستەی سەرەتا تاقی دەکاتەوە.</li>
+          <li><b>گفتوگۆ:</b> Replier، Engage و Collab پێشنووسی وەڵام، کۆمێنت و پەیام دروست دەکەن.</li>
+          <li><b>بڕیار:</b> مرۆڤێک پەسەند، دەستکاری یان ڕەت دەکاتەوە. بێ پەسەندکردن هیچ بڵاو ناکرێتەوە.</li>
+          <li><b>خولگە:</b> ئامار و دەستکارییەکانی خاوەن دەگەڕێنەوە و ئەیجێنتەکان باشتر دەبن.</li>
+        </ol>
+        <p><b>یەک خولی کار چی بەرهەم دەهێنێت:</b> پلانی بڵاوکردنەوەی هەفتانە، پۆستی ئامادەی پەسەندکردن (سڵاید، کاپشن، هاشتاگ، وێنە)، پێنج هەڵبژاردەی ڕستەی سەرەتا بۆ هەر پۆستێک، پێشنووسی وەڵام، پێشنووسی کۆمێنت و پەیام بۆ پەیجە هاوشێوەکان، و ڕاپۆرتی گەشەکردن کە تەنها لە ژمارە ڕاستەقینەکان دروستکراوە.</p>
+      </div>
+    </article>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>داشبۆردی بەڕێوەبردن</h3>
+        <ul class="clean">
+          <li><b>ڕیزی پەسەندکردن</b> بۆ پۆست، ڕیلز، ستۆری، وەڵام، کۆمێنت و پەیام.</li>
+          <li><b>ناوەڕۆک:</b> پۆست، ڕیلز و ستۆری (وێنەیی یان ڤیدیۆیی)، لەگەڵ دەستکاری دەستی.</li>
+          <li><b>پلانی ڕۆژ بە ڕۆژ</b> کە لە ڕێنمایی دەقی خاوەنی پەیجەوە دروست دەکرێت.</li>
+          <li><b>شیکاری و ئامانج:</b> چی سەرکەوتوو بووە، سیناریۆکان (ئاگادار، مام ناوەند، گەشبین) و ئامانجەکان.</li>
+          <li><b>بەرهەمهێنانی وێنە</b> بە چەند کلیل و جێگرەوە.</li>
+        </ul>
+        <p class="note">داشبۆرد ناوەڕۆکی پەیجێکی ڕاستەقینە پیشان دەدات، بۆیە لاپەڕەکانی بە ئاشکرا ناخەمە ڕوو. دەتوانم لە پەیوەندییەکدا پیشانی بدەم.</p>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>ئەیجێنتی بەڕێوەبەر (Manager)</h3>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">خاوەنی پەیج بە زمانی ساکار لەگەڵ Manager قسە دەکات («شەممە و دووشەممە پۆست دابنێ»، «لە وەڵامەکاندا گەرمتر بە»). Manager هەر داواکارییەک دەکات بە یاسا یان ئەرک بۆ ئەیجێنتی گونجاو و ئەگەر داوا بکرێت ئەیجێنتەکان کار دەپێدەکات. هەر ئەیجێنتێک لیستێکی کورتی یاسا چەسپاوەکانی خاوەنی پەیج هەڵدەگرێت.</p>
+        <ul class="clean">
+          <li>یاساکانی پاراستن لە پێشەوە دانراون: تەنها API ی ڕەسمی ئینستاگرام؛ هیچ لایک، فۆڵۆو یان کۆمێنتی خۆکار لەسەر پەیجەکانی تر نییە؛ مرۆڤێک هەموو پێشنووسێک پەسەند دەکات.</li>
+          <li>لە بنەڕەتدا ڕاستگۆ: ئەیجێنتەکان تەنها لەو ژمارانە کار دەکەن کە پێیان دراوە و ئەگەر داتا کەم بێت دەیڵێن.</li>
+        </ul>
+        <p class="note"><b>دۆخ:</b> لەسەر یەک پەیجی تاقیکاری کار دەکات. بڵاوکردنەوەی زیندووی ڕیلز و ستۆری ڤیدیۆیی هێشتا دەبێت تاقی بکرێتەوە.</p>
+      </div></article>
+    </div>
+
+    <h3 style="margin:28px 0 12px">ئەیجێنتەکان بناسە</h3>
+    <div class="agents">
+      <div class="card"><div class="body"><span class="tag">کۆنتڕۆڵ</span><h4>Manager</h4><p>داواکارییە ساکارەکانی خاوەنی پەیج دەکات بە یاسا و ئەرک بۆ ئەیجێنتەکانی تر.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">فێربوون</span><h4>Scout</h4><p>بە گەڕانی وێب پەیجی هاوشێوە دەدۆزێتەوە، بە داتای ڕەسمی Business Discovery ی ئینستاگرام دڵنیایان دەکاتەوە و تەنها ئەوانەی گونجاون هەڵدەگرێت.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">فێربوون</span><h4>Trends</h4><p>باشترین پۆستەکانی ئەو پەیجانە دەخوێنێتەوە: قاڵبەکان، شێوازی ڕستەی سەرەتا، کۆمەڵە هاشتاگ (سەرەکی، تایبەت، دووری) و بیرۆکەی بابەت. ئەگەر داتا کەم بێت بە ڕوونی دەیڵێت.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">فێربوون</span><h4>Analyst</h4><p>پۆست و ژمارەکانی خودی پەیجەکە دەخوێنێتەوە: چی سەرکەوتوو بووە، لە چی دووری بکرێت، کام پۆستی کۆن شایەنی لایەنێکی نوێیە. ڕاپۆرتی گەشەکردنیش تەنها لە داتای ڕاستەقینە دەنووسێت.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">فێربوون</span><h4>Goals</h4><p>سیناریۆی ئاگادار، مام ناوەند و گەشبین و پلانی بڵاوکردنەوەی هەفتانە پیشان دەدات. خەمڵاندنە، نەک گەرەنتی.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">دروستکردن</span><h4>Planner</h4><p>ساڵنامە دروست دەکات: بابەت، قاڵب، ڕۆژ، کاتژمێر و هۆکاری هەر پۆستێک. لە دووبارەکردنەوە دووری دەکات و یاساکانی خاوەنی پەیج ڕەچاو دەکات.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">دروستکردن</span><h4>Designer</h4><p>بابەتێک دەکات بە پۆست، ڕیلز یان ستۆری تەواو: دەقی سڵاید، کاپشن، هاشتاگ و پرۆمپتی وێنە.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">دروستکردن</span><h4>Hooks</h4><p>پێنج ڕستەی سەرەتای جیاواز دەنووسێت (پرسیار، ژمارە، باوەڕی هەڵە بەرامبەر ڕاستی و هتد) و باشترینیان هەڵدەگرێت. بێ فێڵی کلیک و بێ بەڵێنی درۆ.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">گفتوگۆ</span><h4>Replier</h4><p>هەر کۆمێنت یان پەیامێک پۆل دەکات (سوپاس، پرسیار، ڕەخنە، سپام) و وەڵامەکە بە ڕەوشتی براند پێشنووس دەکات. حاڵەتە هەستیارەکان دەچنە لای مرۆڤ. دەقی پەیام داتایە، نەک فەرمان.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">گفتوگۆ</span><h4>Trainer</h4><p>پەیامی نموونەی ڕاستەقینەئاسا دروست دەکات، هەریەکەیان بە سێ شێوازی وەڵام، بۆ ئەوەی Replier ڕەوشت و دڵخوازی خاوەنی پەیج فێر بێت.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">گفتوگۆ</span><h4>Engage</h4><p>پۆستە تازەکانی پەیجە هاوشێوەکان هەڵدەبژێرێت و کۆمێنتی کورتی دڵسۆزانە پێشنووس دەکات. خاوەنی پەیج خۆی بە دەست دایدەنێت.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">گفتوگۆ</span><h4>Collab</h4><p>پەیجە هاوشێوەکان بۆ هاوکاری نمرە دەدات، بیرۆکە پێشنیار دەکات و یەکەم پەیام پێشنووس دەکات. خاوەنی پەیج خۆی بە دەست دەینێرێت.</p></div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>پەیوەندی</h2>
+    <p class="sub">دانیشتووی هەولێرم، عێراق. ئامادەم بۆ کاری تەواوکات، لە دوورەوە و پڕۆژەیی.</p>
+    <div class="btns">
+      <a class="btn" href="https://www.linkedin.com/in/keyvan-babaee-aaa6133b4/">پەیام بنێرە لە LinkedIn</a>
+    </div>
+    <p class="note">خوێندن: بەکالۆریۆسی ژمێریاری، زانکۆی ئازادی ئیسلامی (٢٠١٠). زمانەکان: فارسی (دایک)، کوردی (کار)، ئینگلیزی (کار)، عەرەبی (بنەڕەت).</p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; ٢٠٢٦ کیوان بابایی. هەموو پڕۆژەکانی پیشاندراو خۆم دروستم کردوون.</div>
+</footer>
+
+</body>
+</html>

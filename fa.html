@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>کیوان بابایی | ویدئو، طراحی و محتوای کمک‌گرفته از هوش مصنوعی</title>
+<meta name="description" content="نمونه‌کار کیوان بابایی، اربیل: اپ و وب‌سایت چندزبانه، فروشگاه آنلاین با دستیار فروش هوشمند، ایجنت‌های هوش مصنوعی برای شبکه‌های اجتماعی و ویدئوی تبلیغاتی.">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="ar" href="ar.html">
+<link rel="alternate" hreflang="ckb" href="ckb.html">
+<link rel="alternate" hreflang="fa" href="fa.html">
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121b2e; --panel2:#16233b; --line:#223253;
+    --text:#e8eefc; --muted:#9db0d3; --accent:#3aa0ff; --accent2:#22d3b6;
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f5f8ff; --panel:#ffffff; --panel2:#eef3fc; --line:#d5def0; --text:#0e1a33; --muted:#51618a; --accent:#1769d6; --accent2:#0a8f7a; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.9 Tahoma,"Segoe UI",system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  .review{background:#5a3b00;color:#ffe9b8;text-align:center;padding:8px 12px;font-size:14px}
+  header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding-block:6px;gap:10px 14px;flex-wrap:wrap}
+  header.top b{font-size:15px}
+  nav{display:flex;gap:16px;flex-wrap:wrap}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px}
+  nav a:hover{color:var(--text)}
+  .langsw{display:flex;gap:6px;flex-wrap:wrap}
+  .langsw a{font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--muted)}
+  .langsw a[aria-current]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .hero{padding:56px 0 32px}
+  .hero h1{font-size:clamp(28px,5.5vw,46px);line-height:1.35;margin:0 0 12px}
+  .hero p.lead{font-size:clamp(16px,2.3vw,19px);color:var(--muted);max-width:760px;margin:0 0 20px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+  .chips li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);background:var(--panel)}
+  .btns{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+  .btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  h2{font-size:27px;margin:0 0 8px;line-height:1.5}
+  h3{margin:0 0 6px;font-size:20px;line-height:1.6}
+  h4{margin:6px 0 4px;font-size:17px;line-height:1.6}
+  .sub{color:var(--muted);margin:0 0 22px;max-width:800px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .card .body{padding:18px}
+  .tag{display:inline-block;font-size:12px;padding:3px 9px;border-radius:999px;background:var(--panel2);color:var(--muted);margin:0 0 6px 6px;border:1px solid var(--line)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:760px){.grid2,.cols{grid-template-columns:1fr}}
+  .block{margin-bottom:24px}
+  video,img.shot{display:block;width:100%;height:auto;background:#000}
+  .logo{height:56px;width:auto;margin-bottom:10px}
+  .note{font-size:13.5px;color:var(--muted);margin:10px 0 0}
+  ul.clean{margin:8px 0 0;padding-inline-start:20px}
+  ul.clean li{margin:5px 0}
+  .done li::marker{color:var(--accent2)}
+  .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  .fields p{margin:0;color:var(--muted);font-size:14.5px}
+  .langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0 0;padding:0;list-style:none}
+  .langs li{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+  .langs b{display:block;font-size:17px}
+  .langs span{font-size:12px;color:var(--muted)}
+  .langs i{font-style:normal;font-size:11px;padding:1px 6px;border-radius:999px;border:1px solid var(--accent2);color:var(--accent2);margin-inline-start:4px}
+  .phone-side{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:22px;align-items:start}
+  .phone-side img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--line)}
+  @media (max-width:760px){.phone-side{grid-template-columns:1fr}.phone-side img{max-width:300px;margin:0 auto}}
+  .agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .agents p{margin:0;color:var(--muted);font-size:14.5px}
+  .side{display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch}
+  .side img.shot{height:100%;object-fit:cover}
+  .side-note{padding:18px;background:var(--panel2);border-inline-start:1px solid var(--line)}
+  .side-note h4{margin-top:0}
+  .side-note p{margin:6px 0;font-size:15px}
+  @media (max-width:760px){.side{grid-template-columns:1fr}.side img.shot{height:auto}.side-note{border-inline-start:0;border-top:1px solid var(--line)}}
+  .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+  footer{padding:30px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <b>کیوان بابایی</b>
+    <div class="langsw" aria-label="زبان"><a href="index.html" lang="en" dir="ltr">English</a><a href="ar.html" lang="ar">العربية</a><a href="ckb.html" lang="ckb">کوردی</a><a href="fa.html" lang="fa" aria-current="page">فارسی</a></div>
+    <nav aria-label="بخش‌ها">
+      <a href="#scope">کارهای من</a>
+      <a href="#hailowner">HailOwner</a>
+      <a href="#store">فروشگاه عطر</a>
+      <a href="#agents">ایجنت‌های AI</a>
+      <a href="#contact">تماس</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>ویدئو، طراحی و محتوای کمک‌گرفته از هوش مصنوعی</h1>
+    <p class="lead">اپ، وب‌سایت و فروشگاه آنلاین را به زبان‌های زیاد می‌سازم (از جمله زبان‌های راست‌به‌چپ)، ویدئوی تبلیغاتی تولید می‌کنم و ایجنت‌های هوش مصنوعی برای فروش و محتوا می‌سازم. برای سرعت از ابزارهای هوش مصنوعی استفاده می‌کنم و هر نتیجه را خودم دستی بررسی می‌کنم: متن، جهت نوشتار، رنگ‌ها و زمان‌بندی.</p>
+    <ul class="chips">
+      <li>اربیل، عراق</li>
+      <li>فارسی (زبان مادری)</li>
+      <li>کردی و انگلیسی (در حد کاری)</li>
+      <li>آماده‌ی کار تمام‌وقت، از راه دور و پروژه‌ای</li>
+    </ul>
+    <div class="btns">
+      <a class="btn" href="#scope">کارهایی که انجام می‌دهم</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/keyvan-babaee-aaa6133b4/">پروفایل LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- ========== کارهای من ========== -->
+  <section id="scope">
+    <h2>کارهایی که انجام می‌دهم</h2>
+    <p class="sub">زمینه‌های کاری من، کارهایی که می‌توانم برای شما انجام دهم، و محدودیت‌ها. زیر این بخش برای هر زمینه پروژه‌ی واقعی می‌بینید.</p>
+
+    <div class="fields block">
+      <div class="card"><div class="body"><h4>اپ و وب‌سایت</h4><p>اپ اندروید (React Native / Expo) با یک بک‌اند ساده و پنل مدیریت، و وب‌سایت معرفی. همه‌چیز به زبان‌های زیاد کار می‌کند، از جمله زبان‌های راست‌به‌چپ (فارسی، عربی، کردی، اردو).</p></div></div>
+      <div class="card"><div class="body"><h4>فروشگاه آنلاین</h4><p>ویترین فروشگاه، سبد خرید، حساب کاربری، پرداخت (فعلاً حالت آزمایشی)، داشبورد مدیریت، و یک دستیار فروش هوشمند که مثل یک فروشنده‌ی حرفه‌ای با مشتری صحبت می‌کند.</p></div></div>
+      <div class="card"><div class="body"><h4>ایجنت و دستیار هوش مصنوعی</h4><p>ایجنت‌هایی با Claude API که برنامه می‌ریزند، می‌نویسند، پاسخ می‌دهند و مشاوره می‌دهند. هر چیزی که عمومی می‌شود را یک انسان تأیید می‌کند و فقط از داده‌ی واقعی کار می‌گیرند، نه حدس.</p></div></div>
+      <div class="card"><div class="body"><h4>ویدئوی تبلیغاتی و توضیحی</h4><p>نوشتن متن، تدوین، همگام‌سازی صدا، موسیقی، جلوه‌ی صوتی، زیرنویس، و نسخه به چند زبان. از تصویرهای تولیدشده با کمک AI استفاده می‌کنم و خودم تدوینشان می‌کنم.</p></div></div>
+      <div class="card"><div class="body"><h4>برند و طراحی برای شبکه‌های اجتماعی</h4><p>نسخه‌های لوگو، آیکون، طرح آماده‌ی چاپ کارت، طرح برای شبکه‌های اجتماعی و ویدئوی کوتاه برای پیج و ریلز.</p></div></div>
+      <div class="card"><div class="body"><h4>چندزبانه‌سازی و مستندسازی</h4><p>آماده‌کردن اپ یا وب‌سایت برای ۱۸ زبان، چک‌کردن چیدمان راست‌به‌چپ، و نوشتن مشخصات، فهرست‌های بررسی و تست‌های خودکار.</p></div></div>
+    </div>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>کارهایی که می‌توانم برای شما بکنم</h3>
+        <ul class="clean done">
+          <li>ساختن وب‌سایت یا صفحه‌ی فرود چندزبانه، از جمله چیدمان کردی، عربی و فارسی.</li>
+          <li>ساختن اپ اندروید با پنل مدیریت، یا فروشگاهی با دستیار خرید برای مشتریان.</li>
+          <li>ساختن دستیار AI برای کسب‌وکار شما: پاسخ به مشتری، نوشتن پیش‌نویس محتوا، یا مشاوره به صاحب کار از روی داده‌ی واقعی فروش.</li>
+          <li>تولید ویدئوی تبلیغاتی یا توضیحی و نسخه‌های آن به زبان‌های دیگر.</li>
+          <li>برنامه‌ریزی و ساخت محتوا برای پیج‌های شبکه‌های اجتماعی.</li>
+          <li>آماده‌کردن ترجمه‌ها و تست محصول در همه‌ی زبان‌ها.</li>
+        </ul>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>محدودیت‌ها، صادقانه</h3>
+        <ul class="clean">
+          <li>پروژه‌های این صفحه دمو هستند یا هنوز منتشر نشده‌اند. هیچ‌کدام هنوز مشتری پرداخت‌کننده ندارد.</li>
+          <li>با ابزارهای کمک‌گرفته از AI کار می‌کنم و نتیجه را خودم بازبینی می‌کنم.</li>
+          <li>تسلط حرفه‌ای بر Photoshop و Illustrator را ادعا نمی‌کنم، اما با کمک هوش مصنوعی با همه‌ی ابزارها به نتیجه‌ی خوب می‌رسم.</li>
+          <li>انگلیسی و کردی من در حد کاری است و عربی در حد پایه.</li>
+        </ul>
+      </div></article>
+    </div>
+  </section>
+
+  <!-- ========== HAILOWNER ========== -->
+  <section id="hailowner">
+    <img class="logo" src="logo-full.png" alt="لوگوی HailOwner">
+    <h2>HailOwner: یک کارت، یک اپ، یک وب‌سایت، ۱۸ زبان</h2>
+    <p class="sub">پروژه‌ی اصلی من. یک کارت QR پشت شیشه‌ی جلوی خودرو گذاشته می‌شود. اگر مشکلی پیش بیاید (خودرو راه کسی را بسته، چراغ روشن مانده، در باز است)، کسی که نزدیک است کارت را اسکن می‌کند، یک جمله‌ی آماده انتخاب می‌کند و مالک روی گوشی‌اش اعلان می‌گیرد. <b>هیچ‌کس شماره‌ی تلفن دیگری را نمی‌بیند</b> و کسی که اسکن می‌کند به اپ یا حساب نیاز ندارد. کل محصول را خودم طراحی و ساخته‌ام: ایده، اپ مالک، سرور، صفحه‌ی اسکن، پنل مدیریت، وب‌سایت و ویدئوها.</p>
+
+    <article class="card block">
+      <img class="shot" src="hero-poster.jpg" alt="فردی کارت QR خودرو را در شب اسکن می‌کند">
+      <div class="body">
+        <div class="grid2">
+          <img class="shot" style="border-radius:12px" src="site-problems.jpg" alt="چهار موقعیتی که کارت برایشان ساخته شده: پارک اشتباه، چراغ روشن، در باز، تصادف یا آسیب">
+          <img class="shot" style="border-radius:12px" src="site-compare.jpg" alt="یادداشت با شماره‌ی تلفن روی شیشه در برابر کارت QR">
+        </div>
+        <p class="note">چهار موقعیتی که کارت برایشان ساخته شده (راست) و چرا کارت از نوشتن شماره‌ی تلفن روی شیشه بهتر است (چپ).</p>
+      </div>
+    </article>
+
+    <!-- اپ -->
+    <h3 style="margin:30px 0 8px">اپ HailOwner</h3>
+    <p class="sub">اپ اندروید برای مالک خودرو (Expo / React Native) با سرور اختصاصی. مالک هیچ‌وقت ثبت‌نام نمی‌کند: نصب و بازکردن اپ همان ثبت‌نام است. در زیر صفحه‌ی اول واقعی اپ دمو را به انگلیسی می‌بینید.</p>
+    <article class="card block"><div class="body">
+      <div class="phone-side">
+        <img src="app-home.jpg" alt="صفحه‌ی Home اپ HailOwner به انگلیسی: تعویض روغن تا ۵ روز دیگر، هشدار پارک اشتباه برای BMW X3 و خودروی مالک" loading="lazy">
+        <div>
+          <h4 style="margin-top:0">صفحه‌ی اول (Home)</h4>
+          <p style="margin:6px 0">هرچه مالک اول لازم دارد، در یک صفحه:</p>
+          <ul class="clean">
+            <li><b>یادآور سرویسی که نزدیک است:</b> «BMW X3 — تعویض روغن و سرویس: ۵ روز دیگر». اپ تاریخ را از روی آخرین سرویس حساب می‌کند و پیش از آن اعلان می‌فرستد.</li>
+            <li><b>هشدار پارک اشتباه:</b> «خودروی شما جلوی ورودی یا خروجی پارکینگ را بسته است»، همراه با خودرو، پلاک و اینکه چند دقیقه پیش ارسال شده. کسی که کارت را اسکن کرده این را فرستاده و مالک با یک لمس جواب می‌دهد.</li>
+            <li><b>خودروی مالک</b> زیر هشدارها، با وضعیت کارت («۱ کارت معلق») و نوار تب‌ها: <span class="ltr">Home · Alerts · Vehicles · Reminders · Settings</span>.</li>
+          </ul>
+          <p class="note">این صفحه‌ی اول واقعی اپ دمو است و به انگلیسی. داده‌ی نمونه نشان می‌دهد (یک خودروی نمونه و یک هشدار نمونه). اپ یک دموی کارکننده است و هنوز در فروشگاه اپ نیست.</p>
+        </div>
+      </div>
+      <div class="cols" style="margin-top:14px">
+        <div>
+          <h4>مالک چه کارهایی می‌تواند بکند</h4>
+          <ul class="clean">
+            <li><b>دریافت هشدار</b> به‌صورت اعلان با نام خودرو و پلاک؛ هشدارهای فوری با صدای بلند.</li>
+            <li><b>پاسخ با یک لمس</b> با یک جمله‌ی آماده. در هیچ طرف متن آزاد نیست، پس سوءاستفاده هم نیست.</li>
+            <li><b>مدیریت خودروها و کارت‌ها:</b> ثبت کارت با اسکن QR؛ تعلیق، فعال‌سازی مجدد، تعویض یا ابطال.</li>
+            <li><b>فروش آسان خودرو:</b> مالکیت را در اپ آزاد می‌کنید و مالک جدید همان کارت را اسکن می‌کند و صاحبش می‌شود.</li>
+            <li><b>نزدیکان:</b> تا دو نفر مورد اعتماد که فقط در اورژانس واقعی خبردار می‌شوند.</li>
+            <li><b>حالت اورژانس (اختیاری):</b> کارت پزشکی رمزنگاری‌شده، با ثبت هر بار دیده‌شدن.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>پشت صحنه</h4>
+          <ul class="clean">
+            <li><b>صفحه‌ی اسکن:</b> کسی که اسکن می‌کند یک صفحه‌ی وب به زبان خودش می‌بیند و یکی از ۱۸ جمله‌ی آماده در ۵ دسته را انتخاب می‌کند.</li>
+            <li><b>سرور:</b> API با Nuxt / h3 و PostgreSQL، اعلان‌های push و بک‌اند فروش کارت.</li>
+            <li><b>پنل مدیریت:</b> رمز عبور به‌اضافه‌ی کد احراز هویت؛ کارت‌های متصل با شماره‌ی سریال، آمار، فیلتر، خروجی CSV و سابقه‌ی تغییرات.</li>
+            <li><b>قواعد حریم خصوصی:</b> هیچ شماره‌ای به اشتراک گذاشته نمی‌شود؛ مجموعه‌ی بسته‌ای از جمله‌ها؛ اطلاعات خودرو برای فرستنده محدود است.</li>
+            <li><b>کیفیت:</b> تست‌های خودکار (حدود ۸۰۰ تست سرور در آخرین شمارش من) و قاعده‌ای که اگر متنی در یکی از زبان‌ها جا افتاده باشد، ساخت پروژه را رد می‌کند.</li>
+          </ul>
+        </div>
+      </div>
+    </div></article>
+
+    <!-- سایت -->
+    <h3 style="margin:30px 0 8px">وب‌سایت HailOwner</h3>
+    <p class="sub">یک وب‌سایت معرفی سریع (بدون فریم‌ورک و بدون مرحله‌ی build). ایده را در چهار قدم توضیح می‌دهد، کارت را با شماره روی شیشه مقایسه می‌کند، به سؤال‌ها جواب می‌دهد و کارت می‌فروشد.</p>
+    <article class="card block">
+      <div class="side">
+        <img class="shot" src="site-hero.jpg" alt="صفحه‌ی اول وب‌سایت HailOwner">
+        <aside class="side-note">
+          <h4>اپ پشت این سایت</h4>
+          <p>وب‌سایت کارت را می‌فروشد؛ <b>اپ مالک</b> آن را کار می‌اندازد. مالک QR کارت را اسکن می‌کند تا خودرو را ثبت کند و از آن به بعد هر هشدار رهگذر به‌صورت اعلان، به زبان خود مالک و با نام و پلاک خودرو می‌رسد. مالک با یک لمس جواب می‌دهد، چند خودرو اضافه می‌کند، کارت گم‌شده را تعلیق یا عوض می‌کند، هنگام فروش خودرو کارت را به مالک جدید می‌دهد، یادآور می‌گذارد و می‌تواند کارت اورژانس رمزنگاری‌شده نگه دارد.</p>
+          <p class="note">اپ دمو است و هنوز در فروشگاه اپ نیست.</p>
+        </aside>
+      </div>
+      <div class="body">
+        <div class="grid2">
+          <img class="shot" style="border-radius:12px" src="site-step1.jpg" alt="بخش «چطور کار می‌کند» در سایت: قدم ۱">
+          <img class="shot" style="border-radius:12px" src="site-step4.jpg" alt="بخش «چطور کار می‌کند» در سایت: قدم ۴، مالک هشدار را می‌گیرد">
+        </div>
+        <img class="shot" style="border-radius:12px;margin-top:12px" src="site-features.jpg" alt="ویژگی‌های سایت: پاسخ با یک لمس، نزدیکان، یادآورهای هوشمند">
+        <h4 style="margin-top:14px">چه چیزهایی در سایت هست</h4>
+        <ul class="clean">
+          <li><b>صفحه‌ی اول و داستان:</b> ویدئوی هیرو و یک داستان چهارقدمی (نصب، اسکن، انتخاب جمله، دریافت هشدار).</li>
+          <li><b>مقایسه و ویژگی‌ها:</b> شماره روی شیشه در برابر کارت HailOwner، و شش کارت ویژگی.</li>
+          <li><b>فروشگاه:</b> روند خرید کارت متصل به لینک پرداخت و webhook امضاشده، با فرم «اطلاعاتتان را بگذارید» به‌عنوان جایگزین.</li>
+          <li><b>سؤال و جواب، صفحه‌های حریم خصوصی و شرایط، صفحه‌ی حذف حساب،</b> تصویر اشتراک‌گذاری، نقشه‌ی سایت و برچسب‌های جستجو.</li>
+          <li><b>پنج زبان</b> (انگلیسی، فارسی، عربی، ترکی، کردی) با چیدمان آینه‌ای برای زبان‌های راست‌به‌چپ.</li>
+        </ul>
+        <p><a class="btn" href="https://keyvan198954-cmd.github.io/hailowner-site/">دیدن سایت زنده</a></p>
+      </div>
+    </article>
+
+    <!-- ۱۸ زبان -->
+    <h3 style="margin:30px 0 8px">۱۸ زبان، از جمله راست‌به‌چپ</h3>
+    <p class="sub">هر صفحه، اعلان، جمله‌ی هشدار و صفحه‌ی اسکن به هر ۱۸ زبان وجود دارد. چهار زبان از راست به چپ نوشته می‌شوند (فارسی، عربی، کردی سورانی، اردو) و چیدمان برایشان آینه می‌شود.</p>
+    <article class="card block"><div class="body">
+      <ul class="langs" dir="ltr">
+        <li><b dir="rtl">فارسی</b><span>Persian</span><i>RTL</i></li>
+        <li><b>English</b><span>English</span></li>
+        <li><b dir="rtl">العربية</b><span>Arabic</span><i>RTL</i></li>
+        <li><b>Türkçe</b><span>Turkish</span></li>
+        <li><b dir="rtl">کوردی (سۆرانی)</b><span>Kurdish (Sorani)</span><i>RTL</i></li>
+        <li><b>Azərbaycanca</b><span>Azerbaijani</span></li>
+        <li><b>Türkmençe</b><span>Turkmen</span></li>
+        <li><b>Հայերեն</b><span>Armenian</span></li>
+        <li><b dir="rtl">اردو</b><span>Urdu</span><i>RTL</i></li>
+        <li><b>हिन्दी</b><span>Hindi</span></li>
+        <li><b>Русский</b><span>Russian</span></li>
+        <li><b>Français</b><span>French</span></li>
+        <li><b>Español</b><span>Spanish</span></li>
+        <li><b>Deutsch</b><span>German</span></li>
+        <li><b>Português</b><span>Portuguese</span></li>
+        <li><b>中文</b><span>Chinese</span></li>
+        <li><b>Indonesia</b><span>Indonesian</span></li>
+        <li><b>বাংলা</b><span>Bangla</span></li>
+      </ul>
+      <h4 style="margin-top:16px">چطور این را عملی کردم</h4>
+      <ul class="clean">
+        <li><b>یک منبع متن برای هر زبان،</b> و یک تست خودکار که اگر رشته‌ای در یکی از ۱۸ زبان جا افتاده باشد، شکست می‌خورد.</li>
+        <li><b>جهت نوشتار از روی زبان خوانده می‌شود،</b> نه حدس، پس فارسی، عربی، سورانی و اردو درست آینه می‌شوند.</li>
+        <li><b>انتخاب‌گر زبان با جستجو</b> که هر زبان را با خط خودش نشان می‌دهد تا مردم بتوانند آن را به هر زبانی پیدا کنند.</li>
+        <li><b>جمله‌های آماده‌ی هشدار:</b> ۱۸ جمله در ۵ دسته به هر ۱۸ زبان، تا فرستنده و مالکی که زبان مشترک ندارند هم بتوانند یکدیگر را بفهمند.</li>
+      </ul>
+      <p class="note"><b>نکته‌ی صادقانه:</b> فارسی زبان مادری من است و انگلیسی و کردی در حد کاری. ده زبان از این ۱۸ زبان ترجمه‌ی ماشینی هستند و هنوز افراد بومی بازبینی نکرده‌اند. برای انتشار واقعی باید بومی بخواندشان.</p>
+    </div></article>
+
+    <!-- ویدئو -->
+    <article class="card block">
+      <video controls preload="none" poster="hailowner-promo-poster.jpg" playsinline>
+        <source src="hailowner-promo-en.mp4" type="video/mp4">
+      </video>
+      <div class="body">
+        <h3>ویدئوی تبلیغاتی HailOwner (۵۹ ثانیه، انگلیسی)</h3>
+        <p>یک تبلیغ داستانی: خودرویی که راه را بسته، چراغی که روشن مانده، دری که باز است. HailOwner به هر کسی اجازه می‌دهد بدون دانستن شماره‌ی تلفن مالک به او خبر بدهد. فرد QR را اسکن می‌کند، یک جمله‌ی آماده انتخاب می‌کند و مالک به زبان خودش اعلان می‌گیرد. صدا، موسیقی، جلوه‌های صوتی و زیرنویس‌ها را خودم تدوین و زمان‌بندی کرده‌ام.</p>
+        <p class="note">این تبلیغ در <b>چهار نسخه‌ی زبانی</b> وجود دارد (انگلیسی، عربی، ترکی و فارسی). در اینجا فقط نسخه‌ی انگلیسی نمایش داده می‌شود.</p>
+        <span class="tag">متن و تدوین</span><span class="tag">همگام‌سازی صدا</span><span class="tag">موسیقی و جلوه‌ی صوتی</span><span class="tag">زیرنویس</span><span class="tag">تصویر تولیدشده با کمک AI</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- ========== فروشگاه عطر ========== -->
+  <section id="store">
+    <img class="logo" src="nill-logo.jpg" alt="لوگوی Nill" style="height:64px;border-radius:8px">
+    <h2>Nill: فروشگاه آنلاین عطر با فروشنده‌ی هوشمند و مدیر هوشمند</h2>
+    <p class="sub">یک فروشگاه فارسی و راست‌به‌چپ با طراحی تیره و طلایی. مشتری یک دستیار فروش حرفه‌ی AI می‌گیرد؛ صاحب فروشگاه یک داشبورد مدیریت دارد با یک مدیر هوشمند که از روی داده‌ی واقعی فروشگاه مشاوره می‌دهد.</p>
+
+    <article class="card block">
+      <img class="shot" src="nill-home.jpg" alt="صفحه‌ی اول فروشگاه Nill: ویدئوی تمام‌صفحه‌ی یک شیشه‌ی عطر در جنگل، با دستیار خرید">
+      <div class="body">
+        <h3>فروشگاه زنده</h3>
+        <p>صفحه‌ی اول یک ویدئوی تمام‌صفحه است و دسته‌ها (مردانه، زنانه، یونیسکس، اسپری، بادی اسپلش) لینک‌هایی هستند که با رفتن موس روشن می‌شوند. عکس بالا خود صفحه‌ی اول واقعی است، با پیام خوش‌آمد دستیار خرید در پایین سمت چپ.</p>
+        <p><a class="btn" href="https://perfumenill.vercel.app/">دیدن سایت زنده</a></p>
+        <p class="note">وضعیت: آنلاین منتشر شده. پرداخت در حالت آزمایشی است و فروشگاه هنوز نمی‌فروشد.</p>
+        <span class="tag">Nuxt + Tailwind</span><span class="tag">Supabase</span><span class="tag">Stripe (حالت آزمایشی)</span><span class="tag">طراحی RTL</span><span class="tag">دستیارهای AI</span>
+      </div>
+    </article>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>برای مشتری</h3>
+        <ul class="clean">
+          <li><b>ویترین:</b> پنج صفحه‌ی مجموعه، صفحه‌ی هر محصول، کاتالوگ با جستجو و فیلتر، سبد خرید، پرداخت و حساب مشتری.</li>
+          <li><b>پرداخت:</b> کارت بانکی با Stripe (حالت آزمایشی)، با تبدیل قیمت از دلار به تومان بر پایه‌ی نرخی که صاحب فروشگاه تعیین می‌کند.</li>
+          <li><b>برچسب‌های جستجو و داده‌ی اشتراک‌گذاری</b> روی صفحه‌ی هر محصول.</li>
+          <li><b>صفحه‌ی تماس</b> با کانال‌هایی که صاحب فروشگاه وارد می‌کند (اینستاگرام، تلگرام، واتساپ و غیره).</li>
+        </ul>
+        <h4 style="margin-top:14px">فروشنده‌ی هوشمند (Smart Seller)</h4>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">یک دستیار گفتگو که به فارسی مثل یک مشاور حرفه‌ای عطر با مشتری صحبت می‌کند. گوش می‌دهد مشتری چه می‌خواهد (برای چه کسی، فصل، مناسبت، سبک، ماندگاری، بودجه) و محصولات واقعی پیشنهاد می‌دهد.</p>
+        <ul class="clean">
+          <li><b>فقط موجودی واقعی:</b> از کاتالوگ زنده فقط محصولاتی را انتخاب می‌کند که موجودند و در دسته‌ای هستند که مشتری خواسته (اسپری هرگز زیر «مردانه» نمی‌آید) و بودجه را رعایت می‌کند.</li>
+          <li><b>دلیل صادقانه:</b> هر انتخاب را از روی اطلاعات خود محصول (نت‌ها، خانواده‌ی بو، ماندگاری، فصل‌ها) توضیح می‌دهد و اگر دسته‌ای خالی باشد به‌جای ساختن محصول، همین را می‌گوید.</li>
+          <li><b>هرگز خطا نمی‌دهد:</b> یک مشاور مبتنی بر قاعده خودش جواب می‌دهد و مدل هوش مصنوعی برای سؤال‌های باز به کار می‌رود؛ پس حتی اگر مدل در دسترس نباشد، مشتری جواب مفید می‌گیرد.</li>
+        </ul>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>برای صاحب فروشگاه</h3>
+        <ul class="clean">
+          <li><b>داشبورد مدیریت:</b> سفارش‌ها، محصولات (با دکمه‌ی AI که متن تبلیغاتی می‌نویسد)، جستجو و فیلتر، پنج دسته‌بندی و لینک کانال‌ها.</li>
+          <li><b>موجودی:</b> با هر سفارش پرداخت‌شده موجودی خودکار کم می‌شود.</li>
+          <li><b>تنظیم نرخ ارز</b> برای تبدیل دلار به تومان.</li>
+        </ul>
+        <h4 style="margin-top:14px">مدیر هوشمند (Smart Manager)</h4>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">یک دستیار گفتگو داخل پنل مدیریت که از روی عددهای خود فروشگاه به صاحب کار مشاوره می‌دهد. صاحب فروشگاه می‌تواند به زبان ساده بپرسد («چه چیزی بیشتر فروخت؟»، «امروز چه کنم؟») یا دکمه‌های گزارش را بزند.</p>
+        <ul class="clean">
+          <li><b>آمار:</b> فروش، قیف خرید (مشتری کجا می‌ریزد)، آنچه مشتریان می‌خواهند، محصولات پرطرفدار، و گفتگوها با فروشنده‌ی هوشمند.</li>
+          <li><b>مشاوره درباره‌ی موجودی و کاتالوگ:</b> هشدار می‌دهد کدام دسته محصول قابل فروش ندارد یا کم دارد، کدام محصول عکس یا قیمت ندارد (و قابل خرید نیست)، و مشکل موجودی کجاست، و پیشنهاد می‌دهد چه چیزی اضافه یا تأمین شود.</li>
+          <li><b>فهرست «امروز»:</b> مهم‌ترین کارهای امروز، ساخته‌شده از هشدارها.</li>
+          <li><b>بدون AI هم کار می‌کند:</b> اگر مدل در دسترس نباشد، یک مشاور مبتنی بر قاعده از روی داده جواب می‌دهد و این را هم می‌گوید.</li>
+        </ul>
+        <p class="note">پنل مدیریت ورود می‌خواهد، پس اینجا فقط با متن توضیح داده شده است. در تماس می‌توانم نشانش بدهم.</p>
+      </div></article>
+    </div>
+  </section>
+
+  <!-- ========== ایجنت‌ها ========== -->
+  <section id="agents">
+    <h2>ایجنت‌های AI و داشبورد مدیریت برای یک پیج اینستاگرام</h2>
+    <p class="sub">سیستمی کارکننده با Python، FastAPI و Claude API. دوازده ایجنت، هرکدام با یک وظیفه. نتیجه‌شان را به هم می‌دهند و هر پیش‌نویس در صف تأیید داشبورد منتظر می‌ماند تا یک انسان بپذیرد، ویرایش کند یا رد کند.</p>
+
+    <article class="card block">
+      <img class="shot" src="agents-diagram.png" alt="نمودار ۱۲ ایجنت و خطوطی که آن‌ها را وصل می‌کند: ایجنت‌های یادگیری، ساخت، گفتگو، صف تأیید و اینستاگرام">
+      <div class="body">
+        <h3>ایجنت‌ها چطور به هم وصل‌اند</h3>
+        <p class="note" style="margin-top:0">فلش‌ها نشان می‌دهند چه کسی چه چیزی را به چه کسی می‌دهد. خطوط خط‌چین قوانینی است که Manager می‌دهد. (نوشته‌های نمودار انگلیسی است.)</p>
+      </div>
+    </article>
+
+    <article class="card block">
+      <video controls preload="none" poster="agents-poster.jpg" playsinline>
+        <source src="agents-overview.mp4" type="video/mp4">
+      </video>
+      <div class="body">
+        <h3>ایجنت‌ها با هم کار می‌کنند (۳۹ ثانیه، انگلیسی)</h3>
+        <ol class="clean" style="padding-inline-start:22px">
+          <li><b>یادگیری:</b> Scout پیج‌های مشابه را پیدا می‌کند؛ Trends پست‌هایشان را مطالعه می‌کند.</li>
+          <li><b>برنامه:</b> Analyst از روی عددهای واقعی می‌فهمد چه جواب داده؛ Goals هدف می‌گذارد؛ Planner تقویم هفتگی می‌سازد.</li>
+          <li><b>ساخت:</b> Designer پست را می‌نویسد؛ Hooks پنج جمله‌ی آغازین را امتحان می‌کند.</li>
+          <li><b>گفتگو:</b> Replier، Engage و Collab پیش‌نویس پاسخ، کامنت و پیام می‌سازند.</li>
+          <li><b>تصمیم:</b> یک انسان تأیید، ویرایش یا رد می‌کند. بدون تأیید چیزی منتشر نمی‌شود.</li>
+          <li><b>حلقه:</b> آمار و ویرایش‌های مالک برمی‌گردد و ایجنت‌ها بهتر می‌شوند.</li>
+        </ol>
+        <p><b>یک دور کار چه چیزی تحویل می‌دهد:</b> برنامه‌ی انتشار هفتگی، پست‌های آماده‌ی تأیید (اسلاید، کپشن، هشتگ، تصویر)، پنج گزینه‌ی جمله‌ی آغازین برای هر پست، پیش‌نویس پاسخ، پیش‌نویس کامنت و پیام برای پیج‌های مشابه، و یک گزارش رشد که فقط از عددهای واقعی ساخته شده.</p>
+      </div>
+    </article>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>داشبورد مدیریت</h3>
+        <ul class="clean">
+          <li><b>صف تأیید</b> برای پست، ریلز، استوری، پاسخ، کامنت و پیام.</li>
+          <li><b>محتوا:</b> پست، ریلز و استوری (تصویری یا ویدئویی)، با ویرایش دستی.</li>
+          <li><b>برنامه‌ی روزبه‌روز</b> که از یک دستور متنی صاحب پیج ساخته می‌شود.</li>
+          <li><b>تحلیل و هدف:</b> آنچه جواب داده، سناریوها (محتاط، میانه، خوش‌بینانه) و هدف‌ها.</li>
+          <li><b>تولید تصویر</b> با چند کلید و جایگزین.</li>
+        </ul>
+        <p class="note">داشبورد محتوای یک پیج واقعی را نشان می‌دهد، پس صفحه‌هایش را عمومی نمی‌گذارم. در تماس می‌توانم نشانش بدهم.</p>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>ایجنت مدیر (Manager)</h3>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">صاحب پیج با Manager به زبان ساده صحبت می‌کند («شنبه و دوشنبه پست بگذار»، «در پاسخ‌ها گرم‌تر باش»). Manager هر درخواست را به قانون یا کار برای ایجنت درست تبدیل می‌کند و در صورت خواسته ایجنت‌ها را اجرا می‌کند. هر ایجنت یک فهرست کوتاه از قوانین ثابت صاحب پیج را نگه می‌دارد.</p>
+        <ul class="clean">
+          <li>قواعد ایمنی از پیش گذاشته شده: فقط API رسمی اینستاگرام؛ هیچ لایک، فالو یا کامنت خودکار روی پیج‌های دیگر نیست؛ هر پیش‌نویس را انسان تأیید می‌کند.</li>
+          <li>صادق از ریشه: ایجنت‌ها فقط از عددهایی که به آن‌ها داده شده کار می‌گیرند و اگر داده کم است می‌گویند.</li>
+        </ul>
+        <p class="note"><b>وضعیت:</b> روی یک پیج آزمایشی کار می‌کند. انتشار زنده‌ی ریلز و استوری ویدئویی هنوز باید تست شود.</p>
+      </div></article>
+    </div>
+
+    <h3 style="margin:28px 0 12px">با ایجنت‌ها آشنا شوید</h3>
+    <div class="agents">
+      <div class="card"><div class="body"><span class="tag">کنترل</span><h4>Manager</h4><p>درخواست‌های ساده‌ی صاحب پیج را به قانون و کار برای ایجنت‌های دیگر تبدیل می‌کند.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">یادگیری</span><h4>Scout</h4><p>با جستجوی وب پیج‌های مشابه را پیدا می‌کند، با داده‌ی رسمی Business Discovery اینستاگرام راستی‌آزمایی می‌کند و فقط مناسب‌ها را نگه می‌دارد.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">یادگیری</span><h4>Trends</h4><p>برترین پست‌های آن پیج‌ها را مطالعه می‌کند: قالب‌ها، الگوی جمله‌ی آغازین، دسته‌های هشتگ (اصلی، تخصصی، پرهیز) و ایده‌ی موضوع. اگر داده کم باشد صریح می‌گوید.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">یادگیری</span><h4>Analyst</h4><p>پست‌ها و عددهای خود پیج را می‌خواند: چه جواب داده، از چه پرهیز کند، کدام پست قدیمی ارزش زاویه‌ی تازه دارد. یک گزارش رشد هم فقط از داده‌ی واقعی می‌نویسد.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">یادگیری</span><h4>Goals</h4><p>سناریوی محتاط، میانه و خوش‌بینانه و یک برنامه‌ی انتشار هفتگی نشان می‌دهد. برآورد است، نه تضمین.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">ساخت</span><h4>Planner</h4><p>تقویم را می‌سازد: موضوع، قالب، روز، ساعت و دلیل هر پست. از تکرار پرهیز می‌کند و قوانین صاحب پیج را رعایت می‌کند.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">ساخت</span><h4>Designer</h4><p>یک موضوع را به پست، ریلز یا استوری کامل تبدیل می‌کند: متن اسلاید، کپشن، هشتگ و پرامپت تصویر.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">ساخت</span><h4>Hooks</h4><p>پنج جمله‌ی آغازین متفاوت می‌نویسد (سؤال، عدد، باور غلط در برابر واقعیت و غیره) و بهترین را نگه می‌دارد. بدون کلیک‌طعمه و بدون وعده‌ی دروغ.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">گفتگو</span><h4>Replier</h4><p>هر کامنت یا پیام را دسته‌بندی می‌کند (تشکر، سؤال، نقد، اسپم) و پاسخ را با لحن برند پیش‌نویس می‌کند. موارد حساس به انسان می‌رود. متن پیام‌ها داده است، نه دستور.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">گفتگو</span><h4>Trainer</h4><p>پیام‌های نمونه‌ی واقع‌نما می‌سازد، هرکدام با سه سبک پاسخ، تا Replier سلیقه‌ی صاحب پیج را یاد بگیرد.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">گفتگو</span><h4>Engage</h4><p>پست‌های تازه‌ی پیج‌های مشابه را انتخاب می‌کند و کامنت کوتاه و صمیمانه پیش‌نویس می‌کند. صاحب پیج خودش با دست می‌گذارد.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">گفتگو</span><h4>Collab</h4><p>پیج‌های مشابه را برای همکاری امتیاز می‌دهد، ایده پیشنهاد می‌دهد و پیام اول را پیش‌نویس می‌کند. صاحب پیج خودش با دست می‌فرستد.</p></div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تماس</h2>
+    <p class="sub">ساکن اربیل، عراق. آماده‌ی کار تمام‌وقت، از راه دور و پروژه‌ای.</p>
+    <div class="btns">
+      <a class="btn" href="https://www.linkedin.com/in/keyvan-babaee-aaa6133b4/">پیام در LinkedIn</a>
+    </div>
+    <p class="note">تحصیلات: لیسانس حسابداری، دانشگاه آزاد اسلامی (۲۰۱۰). زبان‌ها: فارسی (مادری)، کردی (کاری)، انگلیسی (کاری)، عربی (پایه).</p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; ۲۰۲۶ کیوان بابایی. همه‌ی پروژه‌های نشان‌داده‌شده را خودم ساخته‌ام.</div>
+</footer>
+
+</body>
+</html>

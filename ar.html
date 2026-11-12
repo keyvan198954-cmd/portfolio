@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>كيوان بابايي | فيديو وتصميم ومحتوى بمساعدة الذكاء الاصطناعي</title>
+<meta name="description" content="معرض أعمال كيوان بابايي، أربيل: تطبيقات ومواقع متعددة اللغات، متاجر إلكترونية بمساعد مبيعات ذكي، وكلاء ذكاء اصطناعي لوسائل التواصل، وفيديوهات ترويجية.">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="ar" href="ar.html">
+<link rel="alternate" hreflang="ckb" href="ckb.html">
+<link rel="alternate" hreflang="fa" href="fa.html">
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121b2e; --panel2:#16233b; --line:#223253;
+    --text:#e8eefc; --muted:#9db0d3; --accent:#3aa0ff; --accent2:#22d3b6;
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f5f8ff; --panel:#ffffff; --panel2:#eef3fc; --line:#d5def0; --text:#0e1a33; --muted:#51618a; --accent:#1769d6; --accent2:#0a8f7a; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.9 "Segoe UI",Tahoma,system-ui,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding-block:6px;gap:10px 14px;flex-wrap:wrap}
+  header.top b{font-size:15px}
+  nav{display:flex;gap:16px;flex-wrap:wrap}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px}
+  nav a:hover{color:var(--text)}
+  .langsw{display:flex;gap:6px;flex-wrap:wrap}
+  .langsw a{font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--muted)}
+  .langsw a[aria-current]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .hero{padding:56px 0 32px}
+  .hero h1{font-size:clamp(28px,5.5vw,46px);line-height:1.35;margin:0 0 12px}
+  .hero p.lead{font-size:clamp(16px,2.3vw,19px);color:var(--muted);max-width:760px;margin:0 0 20px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+  .chips li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);background:var(--panel)}
+  .btns{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+  .btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  h2{font-size:27px;margin:0 0 8px;line-height:1.5}
+  h3{margin:0 0 6px;font-size:20px;line-height:1.6}
+  h4{margin:6px 0 4px;font-size:17px;line-height:1.6}
+  .sub{color:var(--muted);margin:0 0 22px;max-width:800px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .card .body{padding:18px}
+  .tag{display:inline-block;font-size:12px;padding:3px 9px;border-radius:999px;background:var(--panel2);color:var(--muted);margin:0 0 6px 6px;border:1px solid var(--line)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:760px){.grid2,.cols{grid-template-columns:1fr}}
+  .block{margin-bottom:24px}
+  video,img.shot{display:block;width:100%;height:auto;background:#000}
+  .logo{height:56px;width:auto;margin-bottom:10px}
+  .note{font-size:13.5px;color:var(--muted);margin:10px 0 0}
+  ul.clean{margin:8px 0 0;padding-inline-start:20px}
+  ul.clean li{margin:5px 0}
+  .done li::marker{color:var(--accent2)}
+  .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  .fields p{margin:0;color:var(--muted);font-size:14.5px}
+  .langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0 0;padding:0;list-style:none}
+  .langs li{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+  .langs b{display:block;font-size:17px}
+  .langs span{font-size:12px;color:var(--muted)}
+  .langs i{font-style:normal;font-size:11px;padding:1px 6px;border-radius:999px;border:1px solid var(--accent2);color:var(--accent2);margin-inline-start:4px}
+  .phone-side{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:22px;align-items:start}
+  .phone-side img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--line)}
+  @media (max-width:760px){.phone-side{grid-template-columns:1fr}.phone-side img{max-width:300px;margin:0 auto}}
+  .agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .agents p{margin:0;color:var(--muted);font-size:14.5px}
+  .side{display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch}
+  .side img.shot{height:100%;object-fit:cover}
+  .side-note{padding:18px;background:var(--panel2);border-inline-start:1px solid var(--line)}
+  .side-note h4{margin-top:0}
+  .side-note p{margin:6px 0;font-size:15px}
+  @media (max-width:760px){.side{grid-template-columns:1fr}.side img.shot{height:auto}.side-note{border-inline-start:0;border-top:1px solid var(--line)}}
+  .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+  footer{padding:30px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <b>كيوان بابايي</b>
+    <div class="langsw" aria-label="اللغة"><a href="index.html" lang="en" dir="ltr">English</a><a href="ar.html" lang="ar" aria-current="page">العربية</a><a href="ckb.html" lang="ckb">کوردی</a><a href="fa.html" lang="fa">فارسی</a></div>
+    <nav aria-label="الأقسام">
+      <a href="#scope">ماذا أقدّم</a>
+      <a href="#hailowner">HailOwner</a>
+      <a href="#store">متجر العطور</a>
+      <a href="#agents">وكلاء الذكاء الاصطناعي</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>فيديو وتصميم ومحتوى بمساعدة الذكاء الاصطناعي</h1>
+    <p class="lead">أبني تطبيقات ومواقع ومتاجر إلكترونية بلغات كثيرة (منها اللغات التي تُكتب من اليمين إلى اليسار)، وأنتج فيديوهات ترويجية، وأصنع وكلاء ذكاء اصطناعي يساعدون في المبيعات والمحتوى. أستخدم أدوات الذكاء الاصطناعي لأعمل بسرعة، وأراجع كل نتيجة بنفسي: النص، واتجاه الكتابة، والألوان، والتوقيت.</p>
+    <ul class="chips">
+      <li>أربيل، العراق</li>
+      <li>الفارسية (لغتي الأم)</li>
+      <li>الكردية والإنجليزية (مستوى عملي)</li>
+      <li>متاح للعمل بدوام كامل أو عن بُعد أو بالمشروع</li>
+    </ul>
+    <div class="btns">
+      <a class="btn" href="#scope">ماذا أقدّم</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/keyvan-babaee-aaa6133b4/">الملف على LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- ========== ماذا أقدّم ========== -->
+  <section id="scope">
+    <h2>ماذا أقدّم</h2>
+    <p class="sub">مجالات عملي، وما أستطيع تنفيذه لكم، وحدود ما أقدّمه. تحت هذا القسم تجدون مشاريع حقيقية لكل مجال.</p>
+
+    <div class="fields block">
+      <div class="card"><div class="body"><h4>تطبيقات ومواقع</h4><p>تطبيقات أندرويد (React Native / Expo) مع خادم بسيط ولوحة إدارة، ومواقع تعريفية. كل شيء يعمل بلغات كثيرة، ومنها اللغات من اليمين إلى اليسار (الفارسية والعربية والكردية والأوردية).</p></div></div>
+      <div class="card"><div class="body"><h4>متاجر إلكترونية</h4><p>واجهة متجر، وسلة مشتريات، وحسابات للعملاء، ودفع إلكتروني (بالوضع التجريبي حتى الآن)، ولوحة إدارة، ومساعد مبيعات ذكي يتحدث مع العميل كبائع محترف.</p></div></div>
+      <div class="card"><div class="body"><h4>وكلاء ومساعدون بالذكاء الاصطناعي</h4><p>وكلاء مبنيون على Claude API يخططون ويكتبون ويردّون ويقدّمون المشورة. أي شيء يُنشر للجمهور يوافق عليه إنسان، ويعملون على بيانات حقيقية لا على التخمين.</p></div></div>
+      <div class="card"><div class="body"><h4>فيديو ترويجي وتعريفي</h4><p>كتابة النص، والمونتاج، وضبط التعليق الصوتي، والموسيقى، والمؤثرات، والترجمة النصية، ونسخ بعدة لغات. أستخدم لقطات مولَّدة بمساعدة الذكاء الاصطناعي وأقوم بمونتاجها يدويًا.</p></div></div>
+      <div class="card"><div class="body"><h4>هوية بصرية ومحتوى لوسائل التواصل</h4><p>نسخ الشعار، والأيقونات، وتصاميم بطاقات جاهزة للطباعة، وتصاميم لوسائل التواصل، وفيديوهات قصيرة للصفحات والريلز.</p></div></div>
+      <div class="card"><div class="body"><h4>التوطين والتوثيق</h4><p>تجهيز التطبيق أو الموقع لـ ١٨ لغة، وفحص التخطيط من اليمين إلى اليسار، وكتابة المواصفات وقوائم الفحص والاختبارات الآلية.</p></div></div>
+    </div>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>ما أستطيع تنفيذه لكم</h3>
+        <ul class="clean done">
+          <li>بناء موقع أو صفحة هبوط متعددة اللغات، بما فيها التخطيط الكردي والعربي والفارسي.</li>
+          <li>بناء تطبيق أندرويد مع لوحة إدارة، أو متجر مع مساعد تسوّق لعملائكم.</li>
+          <li>صنع مساعد ذكاء اصطناعي لنشاطكم: الرد على العملاء، أو كتابة مسودات المحتوى، أو تقديم المشورة لصاحب العمل من بيانات المبيعات الحقيقية.</li>
+          <li>إنتاج فيديو ترويجي أو تعريفي، ونسخ منه بلغات أخرى.</li>
+          <li>تخطيط وصناعة المحتوى لصفحات وسائل التواصل.</li>
+          <li>تجهيز الترجمات واختبار المنتج بكل اللغات.</li>
+        </ul>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>الحدود، بكل صراحة</h3>
+        <ul class="clean">
+          <li>مشاريعي هنا نماذج تجريبية أو لم تُطلق بعد. ليس لأي منها عملاء يدفعون حتى الآن.</li>
+          <li>أعمل بأدوات مدعومة بالذكاء الاصطناعي وأراجع النتائج بنفسي.</li>
+          <li>لا أدّعي الإتقان الاحترافي لـ Photoshop وIllustrator، لكنني أصل بمساعدة الذكاء الاصطناعي إلى نتائج جيدة مع أي أداة.</li>
+          <li>مستواي في الإنجليزية والكردية عملي، وفي العربية أساسي.</li>
+        </ul>
+      </div></article>
+    </div>
+  </section>
+
+  <!-- ========== HAILOWNER ========== -->
+  <section id="hailowner">
+    <img class="logo" src="logo-full.png" alt="شعار HailOwner">
+    <h2>HailOwner: بطاقة وتطبيق وموقع و١٨ لغة</h2>
+    <p class="sub">مشروعي الرئيسي. توضع بطاقة QR خلف الزجاج الأمامي للسيارة. إذا حدثت مشكلة (السيارة تسدّ الطريق، الأضواء مضاءة، الباب مفتوح)، يمسح شخص قريب البطاقة ويختار جملة جاهزة، فيصل إلى المالك إشعار على هاتفه. <b>لا أحد يرى رقم هاتف الآخر</b>، ومن يمسح البطاقة لا يحتاج إلى تطبيق أو حساب. صممتُ المنتج كله وبنيتُه بنفسي: الفكرة، وتطبيق المالك، والخادم، وصفحة المسح، ولوحة الإدارة، والموقع، والفيديوهات.</p>
+
+    <article class="card block">
+      <img class="shot" src="hero-poster.jpg" alt="شخص يمسح بطاقة QR على زجاج سيارة ليلًا">
+      <div class="body">
+        <div class="grid2">
+          <img class="shot" style="border-radius:12px" src="site-problems.jpg" alt="أربع حالات صُممت البطاقة لها: ركن خاطئ، أضواء مضاءة، باب مفتوح، حادث أو ضرر">
+          <img class="shot" style="border-radius:12px" src="site-compare.jpg" alt="ورقة برقم هاتف على الزجاج مقابل بطاقة QR">
+        </div>
+        <p class="note">الحالات الأربع التي صُممت البطاقة لها (يمين)، ولماذا البطاقة أفضل من ورقة برقم الهاتف (يسار).</p>
+      </div>
+    </article>
+
+    <!-- التطبيق -->
+    <h3 style="margin:30px 0 8px">تطبيق HailOwner</h3>
+    <p class="sub">تطبيق أندرويد لمالك السيارة (Expo / React Native) مع خادم خاص. لا يسجّل المالك حسابًا أبدًا: تثبيت التطبيق وفتحه هو التسجيل كله. أدناه الشاشة الرئيسية الحقيقية للتطبيق التجريبي بالإنجليزية.</p>
+    <article class="card block"><div class="body">
+      <div class="phone-side">
+        <img src="app-home.jpg" alt="الشاشة الرئيسية لتطبيق HailOwner بالإنجليزية: تغيير الزيت بعد ٥ أيام، تنبيه ركن خاطئ لسيارة BMW X3، وسيارة المالك" loading="lazy">
+        <div>
+          <h4 style="margin-top:0">الشاشة الرئيسية (Home)</h4>
+          <p style="margin:6px 0">كل ما يحتاجه المالك أولًا في شاشة واحدة:</p>
+          <ul class="clean">
+            <li><b>تذكير صيانة اقترب موعده:</b> «BMW X3 — تغيير الزيت والصيانة: بعد ٥ أيام». يحسب التطبيق التاريخ من آخر صيانة ويرسل إشعارات قبله.</li>
+            <li><b>تنبيه ركن خاطئ:</b> «سيارتك تسدّ مدخل أو مخرج موقف السيارات»، مع السيارة واللوحة ومنذ كم دقيقة أُرسل. أرسله شخص مسح البطاقة، ويستطيع المالك الرد بلمسة واحدة.</li>
+            <li><b>سيارة المالك</b> تحت التنبيهات، مع حالة البطاقة («بطاقة واحدة موقوفة») وشريط التبويبات: <span class="ltr">Home · Alerts · Vehicles · Reminders · Settings</span>.</li>
+          </ul>
+          <p class="note">هذه هي الشاشة الرئيسية الحقيقية للتطبيق التجريبي، بالإنجليزية. تعرض بيانات تجريبية (سيارة وتنبيه نموذجيان). التطبيق نسخة تجريبية تعمل وليس في متجر التطبيقات بعد.</p>
+        </div>
+      </div>
+      <div class="cols" style="margin-top:14px">
+        <div>
+          <h4>ما الذي يستطيع المالك فعله</h4>
+          <ul class="clean">
+            <li><b>استلام التنبيهات</b> كإشعارات تذكر السيارة واللوحة؛ والعاجلة منها بصوت مرتفع.</li>
+            <li><b>الرد بلمسة واحدة</b> بجملة جاهزة. لا نص حر في أي اتجاه، فلا إساءة.</li>
+            <li><b>إدارة السيارات والبطاقات:</b> تسجيل بطاقة بمسح QR؛ وإيقافها أو إعادة تفعيلها أو استبدالها أو إلغاؤها.</li>
+            <li><b>بيع السيارة بسهولة:</b> يتنازل المالك عن الملكية في التطبيق فيمسح المالك الجديد البطاقة نفسها ويتملّكها.</li>
+            <li><b>المقرّبون:</b> حتى شخصين موثوقين لا يُبلَّغان إلا في طارئ حقيقي.</li>
+            <li><b>وضع الطوارئ (اختياري):</b> بطاقة طبية مشفّرة، وتُسجَّل كل مرة تُعرض فيها.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>ما خلف التطبيق</h4>
+          <ul class="clean">
+            <li><b>صفحة المسح:</b> من يمسح البطاقة يرى صفحة ويب بلغته ويختار إحدى ١٨ جملة جاهزة في ٥ فئات.</li>
+            <li><b>الخادم:</b> واجهة API بـ Nuxt / h3 وقاعدة PostgreSQL، وإشعارات push، وخلفية لبيع البطاقات.</li>
+            <li><b>لوحة الإدارة:</b> كلمة مرور مع رمز مصادقة؛ البطاقات المتصلة بأرقام تسلسلية، وإحصاءات، وفلاتر، وتصدير CSV، وسجل تدقيق.</li>
+            <li><b>قواعد الخصوصية:</b> لا تُشارك أرقام هواتف؛ مجموعة مغلقة من الجمل؛ ومعلومات محدودة عن السيارة تظهر للمرسل.</li>
+            <li><b>الجودة:</b> اختبارات آلية (نحو ٨٠٠ اختبار للخادم في آخر عدّ لي)، وقاعدة تُفشل البناء إذا نقص أي نص في أي لغة.</li>
+          </ul>
+        </div>
+      </div>
+    </div></article>
+
+    <!-- الموقع -->
+    <h3 style="margin:30px 0 8px">موقع HailOwner</h3>
+    <p class="sub">موقع تعريفي سريع (بلا إطار عمل وبلا خطوة بناء). يشرح الفكرة في أربع خطوات، ويقارن البطاقة برقم الهاتف على الزجاج، ويجيب عن الأسئلة، ويبيع البطاقات.</p>
+    <article class="card block">
+      <div class="side">
+        <img class="shot" src="site-hero.jpg" alt="الصفحة الرئيسية لموقع HailOwner">
+        <aside class="side-note">
+          <h4>التطبيق خلف هذا الموقع</h4>
+          <p>الموقع يبيع البطاقة، و<b>تطبيق المالك</b> هو الذي يشغّلها. يمسح المالك رمز QR للبطاقة ليسجّل سيارته، ومن ثم يصله كل تنبيه من أي عابر كإشعار بلغته، يذكر السيارة ولوحتها. يرد المالك بلمسة، ويضيف عدة سيارات، ويوقف البطاقة المفقودة أو يستبدلها، ويسلّم البطاقة للمالك الجديد عند البيع، ويضبط التذكيرات، ويمكنه حفظ بطاقة طوارئ مشفّرة.</p>
+          <p class="note">التطبيق تجريبي وليس في متجر التطبيقات بعد.</p>
+        </aside>
+      </div>
+      <div class="body">
+        <div class="grid2">
+          <img class="shot" style="border-radius:12px" src="site-step1.jpg" alt="قسم «كيف يعمل» في الموقع: الخطوة ١">
+          <img class="shot" style="border-radius:12px" src="site-step4.jpg" alt="قسم «كيف يعمل» في الموقع: الخطوة ٤، يصل التنبيه إلى المالك">
+        </div>
+        <img class="shot" style="border-radius:12px;margin-top:12px" src="site-features.jpg" alt="مزايا الموقع: الرد بلمسة، المقرّبون، التذكيرات الذكية">
+        <h4 style="margin-top:14px">ماذا في الموقع</h4>
+        <ul class="clean">
+          <li><b>الصفحة الرئيسية والقصة:</b> فيديو رئيسي وقصة من أربع خطوات (التثبيت، المسح، اختيار جملة، وصول التنبيه).</li>
+          <li><b>المقارنة والمزايا:</b> رقم هاتف على الزجاج مقابل بطاقة HailOwner، وست بطاقات للمزايا.</li>
+          <li><b>المتجر:</b> مسار شراء البطاقة مرتبط برابط دفع وwebhook موقَّع، مع نموذج «اترك بياناتك» بديلًا.</li>
+          <li><b>الأسئلة والأجوبة، وصفحات الخصوصية والشروط، وصفحة حذف الحساب،</b> وصورة للمشاركة وخريطة الموقع ووسوم البحث.</li>
+          <li><b>خمس لغات</b> (الإنجليزية والفارسية والعربية والتركية والكردية) مع تخطيط معكوس للغات من اليمين إلى اليسار.</li>
+        </ul>
+        <p><a class="btn" href="https://keyvan198954-cmd.github.io/hailowner-site/">فتح الموقع المباشر</a></p>
+      </div>
+    </article>
+
+    <!-- ١٨ لغة -->
+    <h3 style="margin:30px 0 8px">١٨ لغة، منها لغات من اليمين إلى اليسار</h3>
+    <p class="sub">كل شاشة وإشعار وجملة تنبيه وصفحة مسح موجودة بالـ ١٨ لغة كلها. أربع منها تُكتب من اليمين إلى اليسار (الفارسية والعربية والكردية السورانية والأوردية) ويُعكس التخطيط لها.</p>
+    <article class="card block"><div class="body">
+      <ul class="langs" dir="ltr">
+        <li><b dir="rtl">فارسی</b><span>Persian</span><i>RTL</i></li>
+        <li><b>English</b><span>English</span></li>
+        <li><b dir="rtl">العربية</b><span>Arabic</span><i>RTL</i></li>
+        <li><b>Türkçe</b><span>Turkish</span></li>
+        <li><b dir="rtl">کوردی (سۆرانی)</b><span>Kurdish (Sorani)</span><i>RTL</i></li>
+        <li><b>Azərbaycanca</b><span>Azerbaijani</span></li>
+        <li><b>Türkmençe</b><span>Turkmen</span></li>
+        <li><b>Հայերեն</b><span>Armenian</span></li>
+        <li><b dir="rtl">اردو</b><span>Urdu</span><i>RTL</i></li>
+        <li><b>हिन्दी</b><span>Hindi</span></li>
+        <li><b>Русский</b><span>Russian</span></li>
+        <li><b>Français</b><span>French</span></li>
+        <li><b>Español</b><span>Spanish</span></li>
+        <li><b>Deutsch</b><span>German</span></li>
+        <li><b>Português</b><span>Portuguese</span></li>
+        <li><b>中文</b><span>Chinese</span></li>
+        <li><b>Indonesia</b><span>Indonesian</span></li>
+        <li><b>বাংলা</b><span>Bangla</span></li>
+      </ul>
+      <h4 style="margin-top:16px">كيف نفّذتُ ذلك</h4>
+      <ul class="clean">
+        <li><b>مصدر نصوص واحد لكل لغة،</b> واختبار آلي يفشل إذا نقصت أي عبارة في أي لغة من الـ ١٨.</li>
+        <li><b>يُقرأ اتجاه الكتابة من اللغة،</b> لا بالتخمين، فتنعكس الفارسية والعربية والسورانية والأوردية بشكل صحيح.</li>
+        <li><b>منتقي لغة بخاصية البحث</b> يعرض كل لغة بخطها الخاص، ليجدها الناس بأي لغة.</li>
+        <li><b>جمل تنبيه جاهزة:</b> ١٨ جملة في ٥ فئات بكل اللغات الـ ١٨، ليفهم المرسل والمالك أحدهما الآخر حتى لو لم تجمعهما لغة.</li>
+      </ul>
+      <p class="note"><b>ملاحظة صريحة:</b> الفارسية لغتي الأم، والإنجليزية والكردية لغتا عمل. عشر لغات من الـ ١٨ تُرجمت آليًا ولم يراجعها ناطقون أصليون بعد. وقبل إطلاق حقيقي تحتاج إلى مراجعة ناطقين أصليين.</p>
+    </div></article>
+
+    <!-- الفيديو -->
+    <article class="card block">
+      <video controls preload="none" poster="hailowner-promo-poster.jpg" playsinline>
+        <source src="hailowner-promo-en.mp4" type="video/mp4">
+      </video>
+      <div class="body">
+        <h3>الفيديو الترويجي لـ HailOwner (٥٩ ثانية، بالإنجليزية)</h3>
+        <p>فيديو ترويجي قصصي: سيارة تسدّ الطريق، وضوء بقي مضاءً، وباب مفتوح. يتيح HailOwner لأي شخص أن يُبلغ المالك دون أن يعرف رقم هاتفه. يمسح الشخص رمز QR ويختار جملة جاهزة، فيصل إلى المالك تنبيه بلغته. التعليق الصوتي والموسيقى والمؤثرات والترجمة النصية من مونتاجي وتوقيتي.</p>
+        <p class="note">يتوفر هذا الفيديو في <b>أربع نسخ لغوية</b> (الإنجليزية والعربية والتركية والفارسية). المعروضة هنا هي النسخة الإنجليزية فقط.</p>
+        <span class="tag">كتابة ومونتاج</span><span class="tag">ضبط الصوت</span><span class="tag">موسيقى ومؤثرات</span><span class="tag">ترجمة نصية</span><span class="tag">لقطات بمساعدة الذكاء الاصطناعي</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- ========== متجر العطور ========== -->
+  <section id="store">
+    <img class="logo" src="nill-logo.jpg" alt="شعار Nill" style="height:64px;border-radius:8px">
+    <h2>Nill: متجر عطور إلكتروني ببائع ذكي ومدير ذكي</h2>
+    <p class="sub">متجر فارسي بكتابة من اليمين إلى اليسار بتصميم داكن وذهبي. يحصل العميل على مساعد مبيعات ذكي محترف، ويحصل صاحب المتجر على لوحة إدارة فيها مدير ذكي يقدّم المشورة من بيانات المتجر الحقيقية.</p>
+
+    <article class="card block">
+      <img class="shot" src="nill-home.jpg" alt="الصفحة الرئيسية لمتجر Nill: فيديو بملء الشاشة لزجاجة عطر في غابة، مع مساعد التسوق">
+      <div class="body">
+        <h3>المتجر المباشر</h3>
+        <p>الصفحة الرئيسية فيديو بملء الشاشة، والفئات (رجالي، نسائي، للجنسين، بخّاخ، بودي سبلاش) روابط تُضاء عند مرور المؤشر. الصورة أعلاه هي الصفحة الرئيسية الحقيقية، مع رسالة ترحيب المساعد أسفل اليسار.</p>
+        <p><a class="btn" href="https://perfumenill.vercel.app/">فتح الموقع المباشر</a></p>
+        <p class="note">الحالة: منشور على الإنترنت. الدفع بالوضع التجريبي والمتجر لا يبيع بعد.</p>
+        <span class="tag">Nuxt + Tailwind</span><span class="tag">Supabase</span><span class="tag">Stripe (تجريبي)</span><span class="tag">تصميم RTL</span><span class="tag">مساعدو ذكاء اصطناعي</span>
+      </div>
+    </article>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>للعميل</h3>
+        <ul class="clean">
+          <li><b>واجهة المتجر:</b> خمس صفحات للمجموعات، وصفحة لكل منتج، وكتالوج مع بحث وفلاتر، وسلة مشتريات، ودفع، وحسابات للعملاء.</li>
+          <li><b>الدفع:</b> بطاقات عبر Stripe (وضع تجريبي)، مع تحويل الأسعار من الدولار إلى التومان بسعر يحدده صاحب المتجر.</li>
+          <li><b>وسوم البحث وبيانات المشاركة</b> في صفحة كل منتج.</li>
+          <li><b>صفحة تواصل</b> بالقنوات التي يدخلها صاحب المتجر (إنستغرام وتيليغرام وواتساب وغيرها).</li>
+        </ul>
+        <h4 style="margin-top:14px">البائع الذكي (Smart Seller)</h4>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">مساعد محادثة يتحدث مع العملاء بالفارسية كمستشار عطور محترف. يستمع إلى ما يريده العميل (لمن العطر، والفصل، والمناسبة، والأسلوب، ومدة الثبات، والميزانية) ويقترح منتجات حقيقية.</p>
+        <ul class="clean">
+          <li><b>مخزون حقيقي فقط:</b> يختار من الكتالوج المباشر منتجات متوفرة في المخزون وفي الفئة التي طلبها العميل (البخّاخ لا يظهر أبدًا تحت «رجالي»)، ويراعي الميزانية.</li>
+          <li><b>أسباب صادقة:</b> يشرح كل اختيار من بيانات المنتج نفسه (النوتات، والعائلة العطرية، والثبات، والفصول)، وإذا كانت فئة فارغة يقول ذلك بدل اختلاق منتجات.</li>
+          <li><b>لا أخطاء أمام العميل:</b> مرشد قائم على القواعد يجيب بنفسه، ويُستخدم نموذج الذكاء الاصطناعي للأسئلة المفتوحة، فيحصل العميل دائمًا على رد مفيد حتى لو تعذّر النموذج.</li>
+        </ul>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>لصاحب المتجر</h3>
+        <ul class="clean">
+          <li><b>لوحة الإدارة:</b> الطلبات، والمنتجات (مع زر ذكاء اصطناعي يكتب نصًا ترويجيًا)، والبحث والفلاتر، والفئات الخمس، وروابط القنوات.</li>
+          <li><b>المخزون:</b> ينقص تلقائيًا مع كل طلب مدفوع.</li>
+          <li><b>ضبط سعر الصرف</b> من الدولار إلى التومان.</li>
+        </ul>
+        <h4 style="margin-top:14px">المدير الذكي (Smart Manager)</h4>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">مساعد محادثة داخل لوحة الإدارة يقدّم المشورة لصاحب المتجر من أرقام المتجر نفسه. يستطيع أن يسأل بلغة بسيطة («ما الأكثر مبيعًا؟»، «ماذا أفعل اليوم؟») أو يضغط أزرار التقارير.</p>
+        <ul class="clean">
+          <li><b>الإحصاءات:</b> المبيعات، ومسار الشراء (أين يتساقط العملاء)، وما يطلبه العملاء، والمنتجات الأكثر رواجًا، والمحادثات مع البائع الذكي.</li>
+          <li><b>مشورة في المخزون والكتالوج:</b> ينبّه إلى الفئات التي لا منتج قابلًا للبيع فيها أو التي فيها القليل، وإلى المنتجات بلا صورة أو سعر (لا يمكن شراؤها)، وإلى مشكلات المخزون، ويقترح ما يُضاف أو يُورَّد.</li>
+          <li><b>قائمة «اليوم»:</b> أهم الإجراءات الآن، مبنية من التنبيهات.</li>
+          <li><b>يعمل بدون الذكاء الاصطناعي أيضًا:</b> مستشار قائم على القواعد يجيب من البيانات إذا تعذّر النموذج، ويذكر ذلك.</li>
+        </ul>
+        <p class="note">لوحة الإدارة تتطلب تسجيل دخول، لذلك أعرضها هنا بالكلام فقط. يمكنني عرضها في مكالمة.</p>
+      </div></article>
+    </div>
+  </section>
+
+  <!-- ========== وكلاء الذكاء الاصطناعي ========== -->
+  <section id="agents">
+    <h2>وكلاء ذكاء اصطناعي ولوحة إدارة لصفحة إنستغرام</h2>
+    <p class="sub">نظام يعمل، مبني بـ Python وFastAPI وClaude API. اثنا عشر وكيلًا، لكل منهم مهمة واحدة. يمرّرون نتائجهم إلى بعضهم، وينتظر كل مسودة في طابور الموافقة بلوحة الإدارة ليقبلها إنسان أو يعدّلها أو يرفضها.</p>
+
+    <article class="card block">
+      <img class="shot" src="agents-diagram.png" alt="مخطط الوكلاء الاثني عشر والخطوط التي تربطهم: وكلاء التعلّم والإنشاء والتواصل، وطابور الموافقة، وإنستغرام">
+      <div class="body">
+        <h3>كيف يرتبط الوكلاء ببعضهم</h3>
+        <p class="note" style="margin-top:0">تُظهر الأسهم من يمرّر ماذا إلى من. الخطوط المتقطعة هي قواعد من المدير (Manager). (نصوص المخطط بالإنجليزية.)</p>
+      </div>
+    </article>
+
+    <article class="card block">
+      <video controls preload="none" poster="agents-poster.jpg" playsinline>
+        <source src="agents-overview.mp4" type="video/mp4">
+      </video>
+      <div class="body">
+        <h3>الوكلاء يعملون معًا (٣٩ ثانية، بالإنجليزية)</h3>
+        <ol class="clean" style="padding-inline-start:22px">
+          <li><b>التعلّم:</b> يجد Scout صفحات مشابهة؛ ويدرس Trends منشوراتها.</li>
+          <li><b>التخطيط:</b> يعرف Analyst من الأرقام الحقيقية ما نجح؛ ويضع Goals الأهداف؛ ويبني Planner التقويم الأسبوعي.</li>
+          <li><b>الإنشاء:</b> يكتب Designer المنشور؛ ويجرّب Hooks خمس جمل افتتاحية.</li>
+          <li><b>التواصل:</b> يصوغ Replier وEngage وCollab مسودات الردود والتعليقات والرسائل.</li>
+          <li><b>القرار:</b> إنسان يوافق أو يعدّل أو يرفض. لا يُنشر شيء دون موافقة.</li>
+          <li><b>الحلقة:</b> تعود الإحصاءات وتعديلات المالك فيتحسّن الوكلاء.</li>
+        </ol>
+        <p><b>ماذا تُنتج دورة واحدة:</b> خطة نشر أسبوعية، ومنشورات جاهزة للموافقة (شرائح وتعليق ووسوم وصورة)، وخمسة خيارات لجملة الافتتاح لكل منشور، ومسودات ردود، ومسودات تعليقات ورسائل للصفحات المشابهة، وتقرير نمو مبني على أرقام حقيقية فقط.</p>
+      </div>
+    </article>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>لوحة الإدارة</h3>
+        <ul class="clean">
+          <li><b>طابور الموافقة</b> للمنشورات والريلز والستوري والردود والتعليقات والرسائل.</li>
+          <li><b>المحتوى:</b> منشورات وريلز وستوري (صور أو فيديو)، مع تعديل يدوي.</li>
+          <li><b>خطة يومًا بيوم</b> تُبنى من توجيه نصي من صاحب الصفحة.</li>
+          <li><b>التحليلات والأهداف:</b> ما الذي نجح، وسيناريوهات (حذر، متوسط، متفائل)، وأهداف.</li>
+          <li><b>توليد الصور</b> بعدة مفاتيح وبدائل.</li>
+        </ul>
+        <p class="note">تعرض اللوحة محتوى صفحة حقيقية، لذلك لا أنشر شاشاتها علنًا. يمكنني عرضها في مكالمة.</p>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>الوكيل المدير (Manager)</h3>
+        <p style="margin:4px 0;color:var(--muted);font-size:14.5px">يتحدث صاحب الصفحة إلى Manager بلغة بسيطة («انشر السبت والاثنين»، «كن أدفأ في الردود»). يحوّل Manager كل طلب إلى قاعدة أو مهمة للوكيل المناسب، ويشغّل الوكلاء عند الطلب. يحتفظ كل وكيل بقائمة قصيرة من قواعد صاحب الصفحة الثابتة.</p>
+        <ul class="clean">
+          <li>قواعد أمان مدمجة: واجهة إنستغرام الرسمية فقط؛ لا إعجابات ولا متابعات ولا تعليقات آلية على صفحات أخرى؛ وإنسان يوافق على كل مسودة.</li>
+          <li>صادقون بالتصميم: يعمل الوكلاء من الأرقام المعطاة لهم فقط، ويقولون إن البيانات قليلة.</li>
+        </ul>
+        <p class="note"><b>الحالة:</b> يعمل على صفحة تجريبية واحدة. النشر المباشر للريلز وفيديو الستوري ما زال بحاجة إلى اختبار.</p>
+      </div></article>
+    </div>
+
+    <h3 style="margin:28px 0 12px">تعرّف على الوكلاء</h3>
+    <div class="agents">
+      <div class="card"><div class="body"><span class="tag">تحكّم</span><h4>Manager</h4><p>يحوّل طلبات صاحب الصفحة بلغة بسيطة إلى قواعد ومهام للوكلاء الآخرين.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">تعلّم</span><h4>Scout</h4><p>يجد صفحات مشابهة بالبحث على الويب، ويتحقق منها ببيانات Business Discovery الرسمية من إنستغرام، ويحتفظ بالمناسب منها فقط.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">تعلّم</span><h4>Trends</h4><p>يدرس أبرز منشورات تلك الصفحات: القوالب، وأنماط جملة الافتتاح، ومجموعات الوسوم (أساسية، متخصصة، يُتجنَّب)، وأفكار المواضيع. ويصرّح بوضوح عندما تكون البيانات قليلة.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">تعلّم</span><h4>Analyst</h4><p>يقرأ منشورات الصفحة وأرقامها: ما نجح، وما يُتجنَّب، وأي منشورات قديمة تستحق زاوية جديدة. ويكتب أيضًا تقرير نمو من بيانات حقيقية فقط.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">تعلّم</span><h4>Goals</h4><p>يعرض سيناريوهات حذرة ومتوسطة ومتفائلة وخطة نشر أسبوعية. تقديرات، لا ضمانات.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">إنشاء</span><h4>Planner</h4><p>يبني التقويم: الموضوع والقالب واليوم والساعة وسبب كل منشور. يتجنب التكرار ويتبع قواعد صاحب الصفحة.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">إنشاء</span><h4>Designer</h4><p>يحوّل موضوعًا إلى منشور أو ريلز أو ستوري كامل: نص الشرائح والتعليق والوسوم ووصف الصور.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">إنشاء</span><h4>Hooks</h4><p>يكتب خمس جمل افتتاحية مختلفة (سؤال، رقم، خرافة مقابل حقيقة وغيرها) ويحتفظ بالأفضل. بلا طُعم نقرات وبلا وعود كاذبة.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">تواصل</span><h4>Replier</h4><p>يصنّف كل تعليق أو رسالة (شكر، سؤال، نقد، رسائل مزعجة) ويصوغ مسودة الرد بنبرة العلامة. الحالات الحساسة تذهب إلى إنسان. ونص الرسالة بيانات وليس أوامر.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">تواصل</span><h4>Trainer</h4><p>ينشئ رسائل نموذجية واقعية، لكل منها ثلاثة أساليب للرد، ليتعلم Replier ذوق صاحب الصفحة.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">تواصل</span><h4>Engage</h4><p>يختار منشورات حديثة من صفحات مشابهة ويصوغ تعليقات قصيرة صادقة. وينشرها صاحب الصفحة بنفسه.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">تواصل</span><h4>Collab</h4><p>يقيّم الصفحات المشابهة من حيث ملاءمتها للتعاون، ويقترح أفكارًا، ويصوغ الرسالة الأولى. ويرسلها صاحب الصفحة بنفسه.</p></div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل</h2>
+    <p class="sub">أقيم في أربيل، العراق. متاح للعمل بدوام كامل وعن بُعد وبالمشروع.</p>
+    <div class="btns">
+      <a class="btn" href="https://www.linkedin.com/in/keyvan-babaee-aaa6133b4/">راسلني على LinkedIn</a>
+    </div>
+    <p class="note">التعليم: بكالوريوس محاسبة، جامعة آزاد الإسلامية (٢٠١٠). اللغات: الفارسية (الأم)، الكردية (عملي)، الإنجليزية (عملي)، العربية (أساسي).</p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; ٢٠٢٦ كيوان بابايي. جميع المشاريع المعروضة من تنفيذي.</div>
+</footer>
+
+</body>
+</html>
