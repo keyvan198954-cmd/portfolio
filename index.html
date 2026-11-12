@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keyvan Babaee | Video, Design & AI Content</title>
+<meta name="description" content="Portfolio of Keyvan Babaee, Erbil: HailOwner (app, website, 18 languages), AI agents for Instagram, promo videos and multilingual (RTL) websites.">
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121b2e; --panel2:#16233b; --line:#223253;
+    --text:#e8eefc; --muted:#9db0d3; --accent:#3aa0ff; --accent2:#22d3b6;
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f5f8ff; --panel:#ffffff; --panel2:#eef3fc; --line:#d5def0; --text:#0e1a33; --muted:#51618a; --accent:#1769d6; --accent2:#0a8f7a; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  a{color:var(--accent)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+  header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+  header.top b{font-size:15px}
+  nav{display:flex;gap:16px;flex-wrap:wrap}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px}
+  nav a:hover{color:var(--text)}
+  .hero{padding:56px 0 32px}
+  .hero h1{font-size:clamp(30px,6vw,52px);line-height:1.1;margin:0 0 12px;letter-spacing:-.02em}
+  .hero p.lead{font-size:clamp(17px,2.4vw,20px);color:var(--muted);max-width:700px;margin:0 0 20px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+  .chips li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--muted);background:var(--panel)}
+  .btns{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+  .btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  h2{font-size:28px;margin:0 0 6px;letter-spacing:-.01em}
+  h3{margin:0 0 6px;font-size:20px}
+  h4{margin:6px 0 4px;font-size:17px}
+  .sub{color:var(--muted);margin:0 0 22px;max-width:760px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .card .body{padding:18px}
+  .tag{display:inline-block;font-size:12px;padding:3px 9px;border-radius:999px;background:var(--panel2);color:var(--muted);margin:0 6px 6px 0;border:1px solid var(--line)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  @media (max-width:760px){.grid2{grid-template-columns:1fr}}
+  .block{margin-bottom:24px}
+  video,img.shot{display:block;width:100%;height:auto;background:#000}
+  .logo{height:56px;width:auto;margin-bottom:10px}
+  .note{font-size:13px;color:var(--muted);margin:10px 0 0}
+  ul.clean{margin:8px 0 0;padding-left:18px}
+  ul.clean li{margin:5px 0}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+  .tabs button{font:inherit;font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);color:var(--text);cursor:pointer}
+  .tabs button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .lang-text{display:none}
+  .lang-text.on{display:block}
+  .lang-text[dir="rtl"]{text-align:right}
+  .langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0 0;padding:0;list-style:none}
+  .langs li{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+  .langs b{display:block;font-size:17px}
+  .langs span{font-size:12px;color:var(--muted)}
+  .langs i{font-style:normal;font-size:11px;padding:1px 6px;border-radius:999px;border:1px solid var(--accent2);color:var(--accent2);margin-left:4px}
+  .side{display:grid;grid-template-columns:1.15fr 1fr;align-items:stretch}
+  .side img.shot{height:100%;object-fit:cover}
+  .side-note{padding:18px;background:var(--panel2);border-left:1px solid var(--line)}
+  .side-note h4{margin-top:0}
+  .side-note p{margin:6px 0;font-size:15px}
+  @media (max-width:760px){.side{grid-template-columns:1fr}.side img.shot{height:auto}.side-note{border-left:0;border-top:1px solid var(--line)}}
+  .agents{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .agents h4{margin:6px 0 4px}
+  .agents p{margin:0;color:var(--muted);font-size:14.5px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:760px){.cols{grid-template-columns:1fr}}
+  .done li::marker{color:var(--accent2)}
+  footer{padding:30px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <b>Keyvan Babaee</b>
+    <nav aria-label="Sections">
+      <a href="#hailowner">HailOwner</a>
+      <a href="#agents">AI agents</a>
+      <a href="#more">Other work</a>
+      <a href="#scope">What I do</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Video, design and AI-assisted content for brands in Erbil and Iraq.</h1>
+    <p class="lead">I build apps and websites in many languages (including right-to-left ones), make promo videos, and create AI agents that help with content. I use AI tools to move fast and check every result by hand: text, direction, colors and timing.</p>
+    <ul class="chips" aria-label="Quick facts">
+      <li>Erbil, Iraq</li>
+      <li>Persian (native)</li>
+      <li>Kurdish &middot; English (working)</li>
+      <li>Open to full-time, remote and project work</li>
+    </ul>
+    <div class="btns">
+      <a class="btn" href="#hailowner">See HailOwner</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/keyvan-babaee-aaa6133b4/">LinkedIn profile</a>
+    </div>
+  </div>
+
+  <!-- ========== HAILOWNER ========== -->
+  <section id="hailowner">
+    <img class="logo" src="logo-full.png" alt="HailOwner logo">
+    <h2>HailOwner: a card, an app, a website, 18 languages</h2>
+    <p class="sub">My main project. I designed and built the product end to end: the idea, the owner app, the server, the public scan page, the admin panel, the marketing website and the videos.</p>
+
+    <article class="card block">
+      <img class="shot" src="hero-poster.jpg" alt="HailOwner promo scene: a person scans a QR card on a car windshield at night">
+      <div class="body">
+        <h3>What HailOwner is</h3>
+        <p>A QR card sits behind a car's windshield. If something is wrong (the car is blocking someone in, the lights are on, a door is open), a person nearby scans the card, picks one ready sentence, and the owner gets a push alert on their phone. <b>Nobody sees anybody's phone number.</b> The person who scans does not need an app or an account.</p>
+        <div class="grid2" style="margin-top:12px">
+          <img class="shot" style="border-radius:12px" src="site-problems.jpg" alt="Four common problems the card solves: parked wrongly, lights left on, door open, accident or damage">
+          <img class="shot" style="border-radius:12px" src="site-compare.jpg" alt="A note with a phone number on the glass versus a HailOwner QR card">
+        </div>
+        <p class="note">Left: the four situations the card is made for. Right: why a card is better than a phone number on a note.</p>
+      </div>
+    </article>
+
+    <!-- Promo video -->
+    <article class="card block">
+      <video controls preload="none" poster="hailowner-promo-poster.jpg" playsinline>
+        <source src="hailowner-promo-en.mp4" type="video/mp4">
+      </video>
+      <div class="body">
+        <h3>HailOwner promo video (59 seconds, English)</h3>
+        <div class="tabs" role="group" aria-label="Description language">
+          <button type="button" data-l="en" aria-pressed="true">English</button>
+          <button type="button" data-l="ar" aria-pressed="false">العربية</button>
+          <button type="button" data-l="ckb" aria-pressed="false">کوردی</button>
+          <button type="button" data-l="fa" aria-pressed="false">فارسی</button>
+        </div>
+        <p class="lang-text on" data-l="en">A story-led promo: a blocked car, a light left on, an open door. HailOwner lets anyone tell the owner without knowing the owner's phone number. The person scans the QR, picks a ready sentence, and the owner gets an alert in their own language. Voice-over, music, sound effects and captions were edited and timed by me.</p>
+        <p class="lang-text" data-l="ar" dir="rtl" lang="ar">إعلان قصصي مدته ٥٩ ثانية: سيارة تعيق مرور أخرى، ضوء ما زال مضاءً، وباب مفتوح. يتيح HailOwner لأي شخص أن يُبلغ المالك دون أن يعرف رقم هاتفه. يمسح الشخص رمز QR ويختار جملة جاهزة، فيصل إلى المالك إشعار بلغته. التعليق الصوتي والموسيقى والمؤثرات والعناوين من تحريري وتوقيتي.</p>
+        <p class="lang-text" data-l="ckb" dir="rtl" lang="ckb">ڕیکلامێکی ٥٩ چرکەیی بە چیرۆک: ئۆتۆمبێلێک ڕێگا دەگرێت، چرایەک داگیرساو ماوەتەوە، دەرگایەک کراوەیە. HailOwner ڕێگە دەدات هەر کەسێک بێ زانینی ژمارەی مۆبایلی خاوەنەکە ئاگاداری بکاتەوە. کەسەکە QRـەکە سکان دەکات و رستەیەکی ئامادە هەڵدەبژێرێت، و خاوەنەکە بە زمانی خۆی ئاگادارکردنەوە وەردەگرێت. دەنگ، موزیک، کاریگەری دەنگی و ژێرنووسەکان من دەستکاری و کاتبەندیم کردوون.</p>
+        <p class="lang-text" data-l="fa" dir="rtl" lang="fa">تبلیغ داستانی ۵۹ ثانیه‌ای: خودرویی که راه را بسته، چراغی که روشن مانده و دری که باز است. HailOwner به هر کسی اجازه می‌دهد بدون دانستن شماره‌ی تلفن مالک به او خبر بدهد. فرد QR را اسکن می‌کند، یک جمله‌ی آماده انتخاب می‌کند و مالک به زبان خودش اعلان می‌گیرد. صدا، موسیقی، جلوه‌های صوتی و زیرنویس‌ها را خودم تدوین و زمان‌بندی کرده‌ام.</p>
+        <p class="note">The video itself is shown in English only. The description is in four languages. (Arabic, Kurdish and Persian texts were written by me; a native reader should review them before client use.)</p>
+        <span class="tag">Story and editing</span><span class="tag">Voice-over sync</span><span class="tag">Music and sound effects</span><span class="tag">Captions</span><span class="tag">AI-assisted footage</span>
+      </div>
+    </article>
+
+    <!-- Website -->
+    <h3 style="margin:30px 0 8px">The HailOwner website</h3>
+    <p class="sub">A fast, static marketing website for the product (no framework, no build step). It explains the idea in four steps, shows why a card beats a number on the glass, answers questions, and sells the cards.</p>
+    <article class="card block">
+      <div class="side">
+        <img class="shot" src="site-hero.jpg" alt="HailOwner website home page">
+        <aside class="side-note">
+          <h4>The app behind the site</h4>
+          <p>The website sells the card; the <b>owner app</b> is what makes it work. It is an Android app (Expo / React Native) that needs no sign-up. The owner scans the card's QR to register a car, and from then on every alert from a passer-by arrives as a push notification, in the owner's own language, naming the car and its plate. The owner can answer with one tap, add several cars, suspend or replace a lost card, hand a card to a new owner when selling the car, set reminders (insurance, inspection, service), and optionally store an encrypted emergency card. Details are in the app section below.</p>
+          <p class="note">Demo app, not yet in an app store.</p>
+        </aside>
+      </div>
+      <div class="body">
+        <div class="grid2">
+          <img class="shot" style="border-radius:12px" src="site-step1.jpg" alt="Website how-it-works section: step 1">
+          <img class="shot" style="border-radius:12px" src="site-step4.jpg" alt="Website how-it-works section: step 4, the owner gets the alert">
+        </div>
+        <img class="shot" style="border-radius:12px;margin-top:12px" src="site-features.jpg" alt="Website features: one-tap reply, close people, smart reminders">
+        <h4 style="margin-top:14px">What is on the site</h4>
+        <ul class="clean">
+          <li><b>Hero and story:</b> a hero video and a four-step story (install, scan, pick a sentence, get the alert).</li>
+          <li><b>Comparison and features:</b> "a number on the glass or a HailOwner card", plus six feature cards (privacy first, no app for the sender, instant alerts in your language, one-tap reply, close people, smart reminders).</li>
+          <li><b>Explainer videos:</b> short videos in a language-aware player.</li>
+          <li><b>Shop:</b> a card purchase flow connected to a payment link and a signed webhook, with a "leave your details" form as a fallback.</li>
+          <li><b>Questions and answers:</b> privacy, lost cards, selling a car, emergency mode, supported countries and languages.</li>
+          <li><b>Five languages:</b> English, Persian, Arabic, Turkish and Kurdish, with the layout mirrored for right-to-left languages.</li>
+          <li><b>Also built:</b> privacy and terms pages, a delete-account page, share images for social media, sitemap and search tags.</li>
+        </ul>
+        <p class="note">Status: finished and tested on my computer. Not uploaded yet: the domain is not bought and it has not been tested on Safari or a real phone.</p>
+      </div>
+    </article>
+
+    <!-- App -->
+    <h3 style="margin:30px 0 8px">The HailOwner app</h3>
+    <p class="sub">An Android app for the car owner (Expo / React Native), backed by my own server. The owner never signs up: installing and opening the app is the whole registration.</p>
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h4>What the owner can do</h4>
+        <ul class="clean">
+          <li><b>Receive alerts</b> as push notifications that name the vehicle and plate; urgent ones come with a loud sound.</li>
+          <li><b>Reply in one tap</b> with a ready sentence that the sender sees on the same page. No free text either way.</li>
+          <li><b>Manage vehicles and cards:</b> register a card by scanning its QR; suspend, reactivate, replace or revoke it; add several vehicles.</li>
+          <li><b>Sell a car easily:</b> release ownership in the app, and the new owner scans the same card to claim it.</li>
+          <li><b>Close people:</b> up to two trusted people, joined by a one-time code. They are told only in a real emergency.</li>
+          <li><b>Reminders:</b> insurance, technical inspection, oil change and service, with alarms 30, 14, 7 and 1 day before.</li>
+          <li><b>Emergency mode (optional):</b> a medical card and two close contacts stored encrypted, with every view of the data logged.</li>
+          <li><b>Account control:</b> language, notification settings and full account deletion.</li>
+        </ul>
+      </div></article>
+      <article class="card"><div class="body">
+        <h4>What is behind it</h4>
+        <ul class="clean">
+          <li><b>Public scan page:</b> the person who scans the card sees a web page in their language, picks one of 18 ready sentences in 5 categories, and sends it. No app, no account.</li>
+          <li><b>Server:</b> Nuxt / h3 API with PostgreSQL (Drizzle), push notifications and a card-sales backend.</li>
+          <li><b>Admin panel:</b> password plus authenticator code; lists connected cards (with serial numbers), stats, filters, CSV export, a correction tool and an audit log.</li>
+          <li><b>Card tools:</b> scripts that create print-ready card faces.</li>
+          <li><b>Privacy rules built in:</b> no phone numbers shared, closed set of sentences (no free text, so no abuse), and a limited amount of vehicle information shown to the sender.</li>
+          <li><b>Quality:</b> automated tests for the app and the server (about 800 server tests at my last count), and a rule that fails the build if any text is missing in any language.</li>
+        </ul>
+        <p class="note">Status: working demo app (Android). Not published in an app store. iPhone version is planned.</p>
+      </div></article>
+    </div>
+
+    <!-- 18 languages -->
+    <h3 style="margin:30px 0 8px">18 languages, including right-to-left</h3>
+    <p class="sub">Every screen, notification, alert sentence and scan page exists in all 18 languages. Four of them are written right to left (Persian, Arabic, Sorani Kurdish, Urdu), and the whole layout mirrors for them.</p>
+    <article class="card block"><div class="body">
+      <ul class="langs" aria-label="The 18 languages">
+        <li><b dir="rtl">فارسی</b><span>Persian</span><i>RTL</i></li>
+        <li><b>English</b><span>English</span></li>
+        <li><b dir="rtl">العربية</b><span>Arabic</span><i>RTL</i></li>
+        <li><b>Türkçe</b><span>Turkish</span></li>
+        <li><b dir="rtl">کوردی (سۆرانی)</b><span>Kurdish (Sorani)</span><i>RTL</i></li>
+        <li><b>Azərbaycanca</b><span>Azerbaijani</span></li>
+        <li><b>Türkmençe</b><span>Turkmen</span></li>
+        <li><b>Հայերեն</b><span>Armenian</span></li>
+        <li><b dir="rtl">اردو</b><span>Urdu</span><i>RTL</i></li>
+        <li><b>हिन्दी</b><span>Hindi</span></li>
+        <li><b>Русский</b><span>Russian</span></li>
+        <li><b>Français</b><span>French</span></li>
+        <li><b>Español</b><span>Spanish</span></li>
+        <li><b>Deutsch</b><span>German</span></li>
+        <li><b>Português</b><span>Portuguese</span></li>
+        <li><b>中文</b><span>Chinese</span></li>
+        <li><b>Indonesia</b><span>Indonesian</span></li>
+        <li><b>বাংলা</b><span>Bangla</span></li>
+      </ul>
+      <h4 style="margin-top:16px">How I made it work</h4>
+      <ul class="clean">
+        <li><b>One source of text per language,</b> and an automated test that fails if a string is missing in any of the 18.</li>
+        <li><b>Direction is read from the language,</b> not guessed, so Persian, Arabic, Sorani and Urdu mirror correctly.</li>
+        <li><b>A searchable language picker</b> that shows each language in its own script and in the app language, so people can find it in any language.</li>
+        <li><b>Ready-made alert sentences:</b> 18 sentences in 5 categories, in all 18 languages, so a sender and an owner who share no language can still understand each other.</li>
+        <li><b>Persian calendar dates</b> for reminders when the owner uses Persian.</li>
+      </ul>
+      <p class="note"><b>Honest note:</b> Persian is my native language, and English and Kurdish are my working languages. Ten of the 18 languages were machine-translated and have not yet been reviewed by native speakers. For a real launch they need a native review.</p>
+    </div></article>
+  </section>
+
+  <!-- ========== AI AGENTS ========== -->
+  <section id="agents">
+    <h2>AI agents for an Instagram page</h2>
+    <p class="sub">A working system built with Python, FastAPI and the Claude API. Twelve agents, each with one job. They pass their results to each other, and every draft waits in an approval queue for a person to accept, edit or reject.</p>
+
+    <article class="card block">
+      <img class="shot" src="agents-diagram.png" alt="Diagram of the 12 agents and the lines that connect them: learning agents, creating agents, talking agents, the approval queue and Instagram">
+      <div class="body">
+        <h3>How the agents connect</h3>
+        <p class="note" style="margin-top:0">Arrows show who passes what to whom. Dashed lines are rules from the Manager.</p>
+      </div>
+    </article>
+
+    <article class="card block">
+      <video controls preload="none" poster="agents-poster.jpg" playsinline>
+        <source src="agents-overview.mp4" type="video/mp4">
+      </video>
+      <div class="body">
+        <h3>The agents working together (39 s)</h3>
+        <ol class="clean" style="padding-left:20px">
+          <li><b>Learn:</b> Scout finds similar pages; Trends studies their posts.</li>
+          <li><b>Plan:</b> Analyst finds what works from real numbers; Goals sets targets; Planner builds the weekly calendar.</li>
+          <li><b>Create:</b> Designer writes the post; Hooks tests five opening lines.</li>
+          <li><b>Talk:</b> Replier, Engage and Collab draft replies, comments and messages.</li>
+          <li><b>Decide:</b> a person approves, edits or rejects. Nothing is published without approval.</li>
+          <li><b>Loop:</b> insights and the owner's edits flow back, so the agents improve.</li>
+        </ol>
+        <p><b>What comes out of one cycle:</b> a weekly plan, ready-to-approve posts (slides, caption, hashtags, image), five opening-line options per post, draft replies, draft comments and messages for similar pages, and a growth report built only from real numbers.</p>
+      </div>
+    </article>
+
+    <h3 style="margin:28px 0 12px">Meet the agents</h3>
+    <div class="agents">
+      <div class="card"><div class="body"><span class="tag">Control</span><h4>Manager</h4><p>The owner talks to it in plain language (for example &quot;post on Saturday and Monday&quot; or &quot;be warmer in replies&quot;). It turns that into rules and tasks for the other agents.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Learn</span><h4>Scout</h4><p>Finds similar pages with web search, checks them against Instagram's official Business Discovery data, and keeps only the good matches.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Learn</span><h4>Trends</h4><p>Studies the top posts of those pages: formats, opening-line patterns, hashtag sets (core, niche, avoid) and topic ideas. It says clearly when the data is thin.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Learn</span><h4>Analyst</h4><p>Reads the page's own posts and numbers: what worked, what to avoid, which old posts deserve a new angle. Also writes a growth report from real data only.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Learn</span><h4>Goals</h4><p>Shows cautious, middle and optimistic scenarios and a weekly publishing plan. Estimates, never guarantees.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Create</span><h4>Planner</h4><p>Builds the calendar: topic, format, day, hour and the reason for each post. Avoids repeats and follows the owner's rules.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Create</span><h4>Designer</h4><p>Turns a topic into a full post, reel or story: slide text, caption, hashtags and image prompts.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Create</span><h4>Hooks</h4><p>Writes five different opening lines (question, number, myth versus truth and more) and keeps the best. No clickbait, no false promises.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Talk</span><h4>Replier</h4><p>Sorts each comment or message (praise, question, criticism, spam) and drafts a reply in the brand's voice. Sensitive ones go to a person. Message text is treated as data, never as commands.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Talk</span><h4>Trainer</h4><p>Creates realistic sample messages with three reply styles each, so the Replier learns the owner's taste.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Talk</span><h4>Engage</h4><p>Picks fresh posts from similar pages and drafts short, genuine comments. The owner posts them by hand.</p></div></div>
+      <div class="card"><div class="body"><span class="tag">Talk</span><h4>Collab</h4><p>Scores similar pages for collaboration fit, suggests ideas and drafts a first message. The owner sends it by hand.</p></div></div>
+    </div>
+
+    <p class="note"><b>Safety rules built in:</b> official Instagram API only; no automatic likes, follows or comments on other pages; a human approves every draft. <b>Status:</b> working on one test page; live publishing of reels and video stories is still to be tested.</p>
+  </section>
+
+  <!-- ========== OTHER WORK ========== -->
+  <section id="more">
+    <h2>Other work</h2>
+    <article class="card block">
+      <div class="grid2" style="gap:0">
+        <img class="shot" src="collection-hero-men.jpg" alt="Nill perfume store: men's collection page">
+        <img class="shot" src="collection-hero-women.jpg" alt="Nill perfume store: women's collection page">
+      </div>
+      <div class="body">
+        <img class="logo" src="nill-logo.jpg" alt="Nill logo" style="height:64px;border-radius:8px">
+        <h3>Nill: Persian online perfume store</h3>
+        <p>A dark-and-gold, right-to-left online store with collection pages, product pages, a cart, customer accounts, an admin dashboard and an assistant that helps customers choose.</p>
+        <p><span class="tag">Nuxt + Tailwind</span><span class="tag">Supabase</span><span class="tag">Stripe (test mode)</span><span class="tag">RTL design</span></p>
+        <p class="note">Status: published online, payments are in test mode and the store is not selling yet.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ========== WHAT I DID / CAN DO ========== -->
+  <section id="scope">
+    <h2>What I have done, and what I can do for you</h2>
+    <p class="sub">A plain list. "Done" means I built it and it works in a demo. "Can do" means work I am ready to take on. I work with AI-assisted tools and I check and fix the results myself.</p>
+
+    <div class="cols block">
+      <article class="card"><div class="body">
+        <h3>What I have done</h3>
+        <ul class="clean done">
+          <li>Built a mobile app, a server, a public scan page and an admin panel (HailOwner).</li>
+          <li>Made the whole product work in 18 languages, with right-to-left layouts for four of them.</li>
+          <li>Built and designed a marketing website with a scroll story, a comparison, a shop flow, questions and answers, and legal pages.</li>
+          <li>Produced a 59-second English promo video and explainer videos in four languages, with voice-over sync, music, sound effects and captions.</li>
+          <li>Prepared the logo versions, app icons and print-ready card faces.</li>
+          <li>Built a Persian online perfume store with an admin dashboard and test-mode payments.</li>
+          <li>Built a team of 12 AI agents that plans, writes, answers and learns for an Instagram page, with a human approval queue.</li>
+          <li>Researched how to launch the product: payments in Iraq, Turkey and the UAE, tax and sanctions questions, and trademark.</li>
+          <li>Wrote the product spec, decision log and support playbook for HailOwner.</li>
+        </ul>
+      </div></article>
+      <article class="card"><div class="body">
+        <h3>What I can do for you</h3>
+        <ul class="clean done">
+          <li><b>Websites and landing pages</b> in several languages, including Kurdish, Arabic and Persian layouts.</li>
+          <li><b>Mobile apps</b> for Android (React Native / Expo) with a simple backend and an admin panel.</li>
+          <li><b>Promo and explainer videos:</b> script, editing, voice-over, music, captions and versions in several languages.</li>
+          <li><b>Social media content:</b> visuals, short videos and reels, and a content plan.</li>
+          <li><b>AI helpers for your business:</b> content planning, reply drafting, and report-writing tools, always with a person approving.</li>
+          <li><b>Translation and localization:</b> setting up an app or a website for many languages, and testing right-to-left layouts.</li>
+          <li><b>Branding basics:</b> logo versions, icons and brand colors.</li>
+          <li><b>Documentation and testing:</b> clear specs, checklists and automated tests.</li>
+        </ul>
+        <p class="note"><b>Limits, stated plainly:</b> my projects are demos or not yet launched; I use AI-assisted tools and review the results myself; I do not claim professional mastery of Photoshop or Illustrator; machine-translated texts need a native review before a real launch.</p>
+      </div></article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="sub">Based in Erbil, Iraq. Available for full-time, remote and project work.</p>
+    <div class="btns">
+      <a class="btn" href="https://www.linkedin.com/in/keyvan-babaee-aaa6133b4/">Message me on LinkedIn</a>
+    </div>
+    <p class="note">Education: Bachelor's degree in Accounting, Islamic Azad University (2010). Languages: Persian (native), Kurdish (working), English (working), Arabic (basic).</p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Keyvan Babaee. All projects shown were built by me.</div>
+</footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.tabs button');
+  var texts=document.querySelectorAll('.lang-text');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var l=b.getAttribute('data-l');
+      btns.forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false');});
+      texts.forEach(function(t){t.classList.toggle('on', t.getAttribute('data-l')===l);});
+    });
+  });
+})();
+</script>
+</body>
+</html>
